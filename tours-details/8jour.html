@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voyage au cœur de l’Albanie authentique | Escape Albania</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="Explore Albania in 8 days: Tirana, Berat, Gjirokastër, Riviera, Butrint. Private guided tour with expert local guides.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Escape Albania</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>Voyage au cœur de l’Albanie authentique<br></h1>
+            <div class="tour-meta">
+                <span><i class="fas fa-file-alt"></i> Entre villes classées à l’UNESCO, Riviera aux eaux cristallines et
+                    expériences locales, découvrez en 8 jours une Albanie préservée, riche en culture et en
+                    émotions.</span>
+                <span><i class="far fa-calendar-alt"></i> 8 days / 7 nights</span>
+                <span><i class="fas fa-tag"></i> À partir de 750 euros</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img
+                            src="https://showmebus.com/wp-content/uploads/2024/07/albania-tirana-piazza-hd.jpg"
+                            alt="Tirana">
+                        <div class="carousel-caption">Tirana</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://albanopedia.com/wp-content/uploads/2022/12/Image-I.-I.-Lin-Village.-Photo-By-Andi-Demiraj..png"
+                            alt="Lin">
+                        <div class="carousel-caption">Lin</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://eia476h758b.exactdn.com/wp-content/uploads/2022/09/AdobeStock_82270387-scaled.jpeg?strip=all"
+                            alt="Berat">
+                        <div class="carousel-caption">Berat</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.travelsewhere.net/wp-content/uploads/2024/07/DSC_0739-2.jpg"
+                            alt="Gjirokastër">
+                        <div class="carousel-caption">Gjirokastër</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://albaniaturism.com/wp-content/uploads/2025/11/Himare-beach.webp" alt="Himara">
+                        <div class="carousel-caption">Himara</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.visitalbania.app/wp-content/uploads/2022/06/borsh-beach-1-1820x1024.jpg"
+                            alt="Borsh">
+                        <div class="carousel-caption">Borsh</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                Votre itinéraire pour 8 jours</h2>
+            <!-- Jour 1 -->
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1</span> Tirana</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            À la découverte de la capitale vibrante de l'Albanie. À votre arrivée à Tirana, vous
+                            découvrirez la capitale dynamique à travers ses sites emblématiques : la place Skënderbeg,
+                            la mosquée Et'hem Bey, la tour de l’Horloge, le musée national d’histoire et le Bunk'Art 2.
+                            Entre rues animées et cafés branchés, vous percevrez toute l’énergie contemporaine et
+                            artistique de la ville.
+                        </p><br>
+                        <div class="day-image">
+                            <img
+                                src="https://www.goatsontheroad.com/wp-content/uploads/2023/03/aerial-view-of-Tirana-artificial-lake.jpg">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Tirana</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2</span> Lin</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Sur les rives du lac Ohrid : immersion dans un village de pêcheurs chargé d’histoire
+                            Installation à Lin, charmant village au bord du lac d’Ohrid. Vous explorerez ses ruelles en
+                            pierre et profiterez d’une immersion authentique avec une balade à vélo ou en bateau. Un
+                            déjeuner chez l’habitant autour d’un poisson fraîchement pêché vous plongera dans la vie
+                            locale.
+                        </p><br>
+                        <div class="day-image">
+                            <img src="https://albania360.com/wp-content/uploads/2022/06/ezgif.jpg">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Lin</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3</span> Berat</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            La ville aux mille fenêtres et au passé millénaire. À Berat, classée au patrimoine mondial
+                            de l’UNESCO, vous découvrirez ses maisons ottomanes, ses ruelles pavées et son imposant
+                            château, témoignages d’une riche histoire et d’une architecture préservée.
+                        </p><br>
+                        <div class="day-image">
+                            <img
+                                src="https://preview.redd.it/berat-albania-unesco-v0-hrhgrgvbjtde1.jpg?width=640&crop=smart&auto=webp&s=2533dd51ac9d3e092855fcf728579c39fee60054">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Berat</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4</span> Benje</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Bains thermaux, canyons et immersion dans la ville de pierre. À Permet, vous profiterez des
+                            bains naturels sulfureux de Bënjë et des paysages spectaculaires de canyons.
+                        </p><br>
+                        <div class="day-image">
+                            <img
+                                src="https://eia476h758b.exactdn.com/wp-content/uploads/2023/12/thermal-baths-of-Permet-Albania.-Langarica-Canyon-Kadiut-Bridge.jpeg">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Permet</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 5 -->
+            <div class="day-card" id="day5">
+                <div class="day-header" onclick="toggleDay('day5')">
+                    <h3><span class="theme-tag">Jour 5</span> Gjirokastra</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Puis direction Gjirokastër, ville classée à l’UNESCO, où vous explorerez ses ruelles pavées,
+                            ses maisons ottomanes et sa forteresse. Vous participerez également à un atelier de cuisine
+                            traditionnelle albanaise chez l’habitant, pour une expérience conviviale et immersive.
+                        </p><br>
+                        <div class="day-image">
+                            <img src="https://travelrebels.com/wp-content/uploads/2025/07/Gjirokaster-albanie.jpg">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Gjirokastra</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 6 -->
+            <div class="day-card" id="day6">
+                <div class="day-header" onclick="toggleDay('day6')">
+                    <h3><span class="theme-tag">Jour 6</span> Himara</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Entre plages idylliques et trésors antiques de l'Albanie. Cap sur la Riviera albanaise. À
+                            Himarë, vous profiterez de plages aux eaux turquoise, de criques sauvages et de villages
+                            perchés. Une excursion vous permettra également de découvrir le site antique de Butrint et
+                            les paysages côtiers préservés.
+                        </p><br>
+                        <div class="day-image">
+                            <img
+                                src="https://cdn.getyourguide.com/image/format=auto,fit=crop,gravity=auto,quality=60,width=375,height=230,dpr=2/tour_img/d1fb439651ce5d9a61729e52429ea21832b82b7026432977960dc3e3fd564aa0.png">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Himara</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 7 -->
+            <div class="day-card" id="day7">
+                <div class="day-header" onclick="toggleDay('day7')">
+                    <h3><span class="theme-tag">Jour 7</span> Borsh</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Détente sur les plages sauvages de Borsh. Journée dédiée à la détente sur les plages de
+                            Borsh, parmi les plus préservées du pays. Vous découvrirez également les environs, entre mer
+                            cristalline et panoramas spectaculaires. En fin de journée, installation au Funky Cabin, un
+                            chalet unique niché au cœur de la nature, idéal pour une dernière nuit paisible et
+                            ressourçante.
+                        </p><br>
+                        <div class="day-image">
+                            <img src="https://i.ytimg.com/vi/IDv6AoJONaQ/maxresdefault.jpg">
+                        </div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Borsh</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 8 -->
+            <div class="day-card" id="day8">
+                <div class="day-header" onclick="toggleDay('day8')">
+                    <h3><span class="theme-tag">Jour 8</span> Retour</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>
+                            Route vers l’aéroport de Tirana pour votre vol retour.
+                            Fin d’un voyage riche en découvertes, entre nature, culture et traditions albanaises.
+                        </p><br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION TOGGLE -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓
+                    INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue</li>
+                    <li><i class="fas fa-check-circle"></i> Hébergement en hôtel, Guest House ou chalet</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Une balade en bateau à Himara</li>
+                    <li><i class="fas fa-check-circle"></i> Voiture de location</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Atelier de cuisine traditionnelle et un repas chez
+                        l'habitant</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas du midi et du soir</li>
+                    <li><i class="fas fa-times-circle"></i> Les assurances (santé, annulation, voyage, etc.)</li>
+                    <li><i class="fas fa-times-circle"></i> Les billets d'accès aux sites historiques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SECTION - Version "Get a Quote" -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>Voyage au cœur de l’Albanie authentique</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit (8 jours / 7 nuits)</span>
+                            <span><strong>€750</strong> / personne</span>
+                        </div>
+                        <div
+                            style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix par personne. Pour les groupes, contactez-nous pour
+                            un devis personnalisé.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+                        <!-- DATAT: Nisja dhe Kthimi (automatizuar por i ndryshueshëm) -->
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(automatique -
+                                        modifiable)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement
+                                    (8 jours), vous pouvez la modifier.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="10" value="1"
+                                placeholder="Combien de personnes ?">
+                            <small style="display: block; margin-top: 5px; color: #666;">Pour les groupes, nous vous
+                                contacterons pour ajuster le total.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Demandes spéciales</label>
+                            <textarea id="requests" rows="3"
+                                placeholder="Régime alimentaire, préférences d'hébergement..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Vous recevrez un email de confirmation sous 24h. Vos informations seront envoyées à notre
+                            équipe.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+                    <p class="footer__desc">Premium authentic travel in Albania, designed with local experts.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@escapealbania.al</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Escape Albania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ==================== INICIALIZIMI EMAILJS ====================
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'escape_albania2024';
+        const EMAILJS_TEMPLATE_ID = 'template_3qiaf5k';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ==================== KARUSELI ====================
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+
+        // ==================== TOGGLE DITËT ====================
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ==================== TOGGLE INCLUSION/EXCLUSION ====================
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FUNKSIONET PËR DATAT ==========
+        function updateReturnDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDateInput = document.getElementById('endDate');
+            if (startDate) {
+                const start = new Date(startDate);
+                // Shtojmë 7 ditë (për turin me 8 ditë)
+                const returnDate = new Date(start);
+                returnDate.setDate(start.getDate() + 7);
+                const year = returnDate.getFullYear();
+                const month = String(returnDate.getMonth() + 1).padStart(2, '0');
+                const day = String(returnDate.getDate()).padStart(2, '0');
+                endDateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ==================== DËRGIMI I TË DHËNAVE NË EMAILJS ====================
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const date = document.getElementById('startDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+
+            if (!name || !email || !phone || !date) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'booking@escapealbania.al',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: date,
+                    travelers: travelers,
+                    tour_name: 'Voyage au cœur de l’Albanie authentique',
+                    price: '€750 per person',
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                document.getElementById('startDate').value = new Date().toISOString().split('T')[0];
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ==================== MENUJA HAMBURGER ====================
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+
+        // ==================== DATA PARAZGJEDHJE ====================
+        const today = new Date().toISOString().split('T')[0];
+        const startDateInput = document.getElementById('startDate');
+        if (startDateInput) {
+            startDateInput.value = today;
+        }
+    </script>
+</body>
+
+</html>

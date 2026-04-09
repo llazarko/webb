@@ -1,0 +1,642 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Découvrir en Vélo le Pays des Aigles | Escape Albania</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="10 jours à vélo en Albanie : Berat, canyons d'Osumi, sources thermales de Benje, Gjirokaster, et plages de Ksamil-Sarande. VTTAE, hébergements authentiques et paysages préservés.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        /* Stile shtesë për zgjedhjen e biçikletave */
+        .bike-option {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            cursor: pointer;
+            padding: 15px;
+            border: 2px solid #e0e6ed;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            flex: 1;
+        }
+        .bike-option:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        .bike-option.selected {
+            border-color: #2c7da0;
+            background: #eef2ff;
+            box-shadow: 0 4px 12px rgba(44,125,160,0.2);
+        }
+        .bike-option img {
+            width: 100px;
+            height: 80px;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+        .bike-option .bike-info {
+            flex: 1;
+        }
+        .bike-option .bike-info strong {
+            font-size: 1.1rem;
+            color: #1e3a5f;
+        }
+        .bike-option .bike-info small {
+            color: #5e6b7d;
+            font-size: 0.8rem;
+        }
+        .bike-option input[type="radio"] {
+            width: 20px;
+            height: 20px;
+            accent-color: #2c7da0;
+        }
+
+        @media (max-width: 768px) {
+            .bike-option {
+                flex-direction: column;
+                text-align: center;
+            }
+            .bike-option img {
+                width: 100%;
+                height: 150px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Escape Albania</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>Découvrir en Vélo le Pays des Aigles<br><span style="font-size: 17px; color: #5e6b7d;">Albanie à VTTAE : Berat, Canyons d'Osumi, Benje, Gjirokaster & Riviera</span></h1>
+            <div class="tour-meta">
+                <span><i class="far fa-calendar-alt"></i> 10 jours / 9 nuits</span>
+                <span><i class="fas fa-bicycle"></i> VTTAE & Aventure immersive</span>
+                <span><i class="fas fa-tag"></i> Circuit personnalisé</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img
+                            src="https://kristatheexplorer.com/wp-content/uploads/2024/06/New-Bridge-of-Berat-edited-scaled.jpg"
+                            alt="Berat">
+                        <div class="carousel-caption">Berat, la ville aux mille fenêtres</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.albrafting.org/sites/default/files/101008864_1462966837219676_1371312364456119045_n.jpg"
+                            alt="Canyons Osumi">
+                        <div class="carousel-caption">Canyons d'Osumi</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://albaniannight.com/wp-content/uploads/2025/12/Benja-Thermal-Baths-in-Langarica-Canyon-min-scaled.jpeg"
+                            alt="Benje Thermal">
+                        <div class="carousel-caption">Eaux thermales de Benje</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.en-vols.com/wp-content/uploads/afmm/2024/07/shutterstock.zedspider-centre-ville-historique-de-Gjirokastra-en-Albanie-plus-belle-ville-du-pays-scaled.jpg"
+                            alt="Gjirokaster">
+                        <div class="carousel-caption">Gjirokaster, ville UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://img-4.linternaute.com/CZ_TMsjuf1eLVWo9NGDAT9fn4zA=/1240x/smart/678e4e3c2167437ebccfdbcb444940c5/ccmcms-linternaute/78098557.jpg"
+                            alt="Ksamil">
+                        <div class="carousel-caption">Ksamil & plages ioniennes</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://img.lonelyplanet.fr/s3fs-public/styles/wide/public/2024-07/parc_national_butrint.jpg.webp?itok=T_1Ew_KJ"
+                            alt="Butrint">
+                        <div class="carousel-caption">Parc antique de Butrint</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                                Votre itinéraire pour 10 jours en Vélo</h2>
+            <h4 style="font-family: var(--font-serif); font-size: 1.5rem; margin-bottom: 40px; color: var(--secondary);">Phase 1 / L'Albanie en Vélo (VTTAE) 5 jours</h4>
+            
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1</span> Berat & château – Départ vers village d'agrotourisme (14,8 km) – Guest House au parc national Tomorri (33,3 km)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>Arrivée à l'aéroport de Tirana et transfert à Berat.</strong> Première partie : visite de Berat, « la ville aux mille fenêtres », et de son château classé UNESCO. Deuxième partie : départ pour premier itinéraire à vélo (14,8 km) à destination d'un village d'agrotourisme. Déjeuner dans un restaurant d'agrotourisme. Départ pour le deuxième itinéraire à vélo (33,3 km) pour rejoindre une Guest House située dans un endroit magique en pleine nature, au milieu des vignes dans les montagnes albanaises (parc national de Tomorri).</p><br>
+                        <div class="day-image"><img src="https://cdn.getyourguide.com/image/format=auto,fit=contain,gravity=center,quality=60,width=1440,height=650,dpr=1/tour_img/d6c85578a32b51de16cbdb099e7b0839caad235cc6b3a80961a07a980669959f.jpg" alt="Berat"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Guest House (parc national Tomorri)</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 14,8 km + 33,3 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2</span> Randonnée pédestre matinale – Départ à vélo vers les Canyons d'Osumi (60,7 km)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Première partie : randonnée à pied au cœur des montagnes albanaises aux alentours du Guest House. Deuxième partie : départ à vélo à destination des Canyons d'Osumi (60,7 km). Hébergement dans un hôtel 4 étoiles à proximité du canyon.</p><br>
+                        <div class="day-image"><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/12/53/2e/1a.jpg" alt="Canyons Osumi"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel 4 étoiles près du canyon d'Osumi</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 60,7 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3</span> Canyons d'Osumi → Parc national (52,9 km) – Family Guest House & Raki traditionnel</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Départ à vélo à partir des Canyons d'Osumi et arrivée dans un autre parc national au cœur des montagnes et forêts albanaises (52,9 km). Hébergement : Family Guest House. Particularités : repas traditionnels albanais faits maison par la famille d'accueil. Dégustation de l'alcool traditionnel albanais : Raki.</p><br>
+                        <div class="day-image"><img src="https://www.kuqaraza.com/wp-content/uploads/2021/05/national-park-albania.jpg" alt="Parc national Albanie"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Family Guest House (repas maison & Raki)</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 52,9 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4</span> Parc national → Eaux thermales naturelles à Benje – PERMET (53,3 km) + Baignade</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Départ à vélo à partir du parc national et arrivée dans les eaux thermales naturelles à Benje – PERMET (53,3 km). Baignade dans les eaux thermales à Benje.</p><br>
+                        <div class="day-image"><img src="https://media.tacdn.com/media/attractions-splice-spp-674x446/07/a6/0d/32.jpg" alt="Benje Thermal"></div>
+                        <div class="hotel-info"><i class="fas fa-hot-tub"></i> <span>Baignade dans les eaux thermales de Benje</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 53,3 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" id="day5">
+                <div class="day-header" onclick="toggleDay('day5')">
+                    <h3><span class="theme-tag">Jour 5</span> Benje → Hôtel 4 étoiles le long d'un fleuve (32,6 km)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Départ de Benje à vélo, et arrivée dans un hôtel situé le long d'un fleuve dans le sud de l'Albanie (32,6 km). Hébergement : Hôtel 4 étoiles.</p><br>
+                        <div class="day-image"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/362456359.jpg" alt="Hotel river Albania"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hôtel 4 étoiles au bord du fleuve</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 32,6 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="day-card" id="day6">
+                <div class="day-header" onclick="toggleDay('day6')">
+                    <h3><span class="theme-tag">Jour 6</span> Départ vélo → Gjirokaster (24,7 km) – Visite de la ville et du château</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Départ à vélo et arrivée à Gjirokaster (24,7 km). Visite de la ville, de ses ruelles particulières et de son château. Hébergement : Guest House avec vue sur la ville et le château.<br>Les vélos sont restitués à Gjirokastër, marquant la fin de l’aventure à deux roues et le début d’une parenthèse balnéaire dans le sud de l’Albanie, entre eaux cristallines et paysages méditerranéens, à savourer en toute liberté… sans vélo</p><br>
+                        <div class="day-image"><img src="https://eia476h758b.exactdn.com/wp-content/uploads/2023/07/Gjirokastra-Citadel-Castle.jpeg?strip=all" alt="Gjirokaster"></div>
+                        <div class="hotel-info"><i class="fas fa-landmark"></i> <span>Visite château & vieille ville UNESCO</span></div>
+                        <div class="hotel-info"><i class="fas fa-road"></i> <span>Kilomètres : 24,7 km</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <h2 style="font-family: var(--font-serif); font-size: 1.5rem; margin: 50px 0 30px; color: var(--primary);">Phase 2 : 4 Jours de plage dans le sud de l'Albanie : BUTRINT/KSAMIL/SARANDE</h2>
+            
+            <div class="day-card" id="day7">
+                <div class="day-header" onclick="toggleDay('day7')">
+                    <h3><span class="theme-tag">Jour 7-10</span> Butrint (UNESCO) – Ksamil – Plages de la Riviera Ionienne</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Visite du parc archéologique de Butrint (UNESCO). Trajet BUTRINT → KSAMIL (5 km). Dégustation de moules du lac Butrinti à Ksamil. Temps libre pour profiter des plages. Hébergement à Ksamil ou Sarande. Transfert aéroport Tirana inclus le dernier jour.</p><br>
+                        <div class="day-image"><img src="https://static2-viaggi.corriereobjects.it/wp-content/uploads/2018/06/27saranda-bassa.jpg?v=1530113415" alt="Ksamil"></div>
+                        <div class="hotel-info"><i class="fas fa-umbrella-beach"></i> <span>Plages, moules fraîches & détente</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓ INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Conception et élaboration du circuit</li>
+                    <li><i class="fas fa-check-circle"></i> Organisation et réservations (VTTAE, itinéraires, hôtels, guest house)</li>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue pour chaque voyageur (offerts)</li>
+                    <li><i class="fas fa-check-circle"></i> Visite de la capitale Tirana avec le guide local (offerte)</li>
+                    <li><i class="fas fa-check-circle"></i> Mise à disposition des VTTAE</li>
+                    <li><i class="fas fa-check-circle"></i> Mise à disposition de la voiture de location (à confirmer)</li>
+                    <li><i class="fas fa-check-circle"></i> Séjour en hotel/guest house/chez l'habitant pour 9 nuits</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les billets d'accès aux sites touristiques</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance à distance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Transports aéroport→hôtel et hôtel→aéroport</li>
+                    <li><i class="fas fa-check-circle"></i> Un repas chez l'habitant (offert)</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas midi & soir</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SECTION ME BIÇIKLETA DHE DATAT -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>Découvrir en Vélo le Pays des Aigles</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit complet (10 jours / 9 nuits)</span>
+                            <span class="price"><strong>€1,290</strong> / person</span>
+                        </div>
+                        <div style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix personnalisé incluant VTTAE, hébergements, petits-déjeuners, transferts et entrées.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis – Circuit vélo Albanie</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+                        
+                        <!-- DATAT: Nisja dhe Kthimi (automatizuar por i ndryshueshëm) -->
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(automatique - modifiable)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement (10 jours), vous pouvez la modifier.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="20" value="2">
+                        </div>
+
+                        <!-- ZGJEDHJA E MODELIT TË BIÇIKLETËS ME IMAGJE -->
+                        <div class="form-group" style="margin: 20px 0;">
+                            <label style="display: block; margin-bottom: 15px; font-weight: 600; font-size: 1.1rem;">
+                                <i class="fas fa-bicycle"></i> Choisissez votre modèle de VTTAE *
+                            </label>
+                            <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                                <!-- Propozimi 1 -->
+                                <div class="bike-option" id="bikeOption1" onclick="selectBike('proposition1')">
+                                    <img src="/assets/images/bike2.png" alt="VTTAE tout-terrain">
+                                    <div class="bike-info">
+                                        <strong>Proposition 1</strong><br>
+                                        <small>Modèle tout-terrain • Batterie haute autonomie (100 km) • Suspension intégrale • Parfait pour les montagnes albanaises</small>
+                                    </div>
+                                    <input type="radio" name="bikeModel" value="Proposition 1 : Modèle tout-terrain avec batterie haute autonomie (100km)">
+                                </div>
+                                <!-- Propozimi 2 -->
+                                <div class="bike-option" id="bikeOption2" onclick="selectBike('proposition2')">
+                                    <img src="/assets/images/bike1.png" alt="VTTAE confort">
+                                    <div class="bike-info">
+                                        <strong>Proposition 2</strong><br>
+                                        <small>Modèle confort • Suspension renforcée • Cadre léger • Selle ergonomique • Idéal pour les longues distances</small>
+                                    </div>
+                                    <input type="radio" name="bikeModel" value="Proposition 2 : Modèle confort avec suspension renforcée et cadre léger">
+                                </div>
+                            </div>
+                            <input type="hidden" id="selectedBike" value="">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Demandes spéciales (régime, préférences d'hébergement, modèle précis...)</label>
+                            <textarea id="requests" rows="3" placeholder="Intolérances alimentaires, allergies, taille du vélo..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Réponse sous 24h. Vos données sont sécurisées.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+                    <p class="footer__desc">Authentic travel experiences – VTTAE, culture et nature préservée.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@escapealbania.al</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Escape Albania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ========== EMAILJS CONFIG ==========
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'escape_albania2024';
+        const EMAILJS_TEMPLATE_ID = 'template_cprrzzs';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ========== CAROUSEL ==========
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+        window.moveSlide = moveSlide;
+
+        // ========== TOGGLE DAYS ==========
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ========== TOGGLE INCLUSION ==========
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FUNKSIONET PËR DATAT ==========
+        function updateReturnDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDateInput = document.getElementById('endDate');
+            if (startDate) {
+                const start = new Date(startDate);
+                // Shtojmë 10 ditë (për turin me 10 ditë)
+                const returnDate = new Date(start);
+                returnDate.setDate(start.getDate() + 10);
+                const year = returnDate.getFullYear();
+                const month = String(returnDate.getMonth() + 1).padStart(2, '0');
+                const day = String(returnDate.getDate()).padStart(2, '0');
+                endDateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ========== ZGJEDHJA E BIÇIKLETËS ME IMAGJE ==========
+        let selectedBikeValue = '';
+
+        window.selectBike = function(bikeType) {
+            const option1 = document.querySelector('#bikeOption1 input[type="radio"]');
+            const option2 = document.querySelector('#bikeOption2 input[type="radio"]');
+            const label1 = document.getElementById('bikeOption1');
+            const label2 = document.getElementById('bikeOption2');
+            
+            if (bikeType === 'proposition1') {
+                option1.checked = true;
+                option2.checked = false;
+                selectedBikeValue = option1.value;
+                label1.classList.add('selected');
+                label2.classList.remove('selected');
+            } else if (bikeType === 'proposition2') {
+                option2.checked = true;
+                option1.checked = false;
+                selectedBikeValue = option2.value;
+                label2.classList.add('selected');
+                label1.classList.remove('selected');
+            }
+            document.getElementById('selectedBike').value = selectedBikeValue;
+        };
+
+        // Event listeners për radio buttons direkt
+        document.addEventListener('DOMContentLoaded', function() {
+            const radio1 = document.querySelector('#bikeOption1 input[type="radio"]');
+            const radio2 = document.querySelector('#bikeOption2 input[type="radio"]');
+            
+            if (radio1) {
+                radio1.addEventListener('change', function() {
+                    if (this.checked) selectBike('proposition1');
+                });
+            }
+            if (radio2) {
+                radio2.addEventListener('change', function() {
+                    if (this.checked) selectBike('proposition2');
+                });
+            }
+            
+            // Inicializojmë datën e nisjes dhe kthimit
+            const today = new Date().toISOString().split('T')[0];
+            document.getElementById('startDate').value = today;
+            updateReturnDate();
+        });
+
+        // ========== DËRGIMI I EMAILJS ==========
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+            
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const selectedBike = document.getElementById('selectedBike').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+            
+            if (!name || !email || !phone || !startDate) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+            
+            if (!selectedBike) {
+                alert('Veuillez sélectionner un modèle de VTTAE (Proposition 1 ou 2).');
+                return;
+            }
+            
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'booking@escapealbania.al',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: startDate,
+                    end_date: endDate,
+                    travelers: travelers,
+                    tour_name: 'Découvrir en Vélo le Pays des Aigles (10 jours / 9 nuits)',
+                    price: 'Devis personnalisé',
+                    bike_model: selectedBike,
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Demande envoyée avec succès ! Nous vous répondrons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                document.getElementById('startDate').value = new Date().toISOString().split('T')[0];
+                updateReturnDate();
+                // Re-inicializojmë zgjedhjen e biçikletës
+                document.getElementById('selectedBike').value = '';
+                selectedBikeValue = '';
+                document.getElementById('bikeOption1').classList.remove('selected');
+                document.getElementById('bikeOption2').classList.remove('selected');
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>6 Jours au cœur de l'Albanie sauvage | Escape Albania</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="6 jours en Albanie : Gjirokaster, œil bleu, Ksamil, Butrint, Tirana. Hébergements authentiques, balade à cheval, atelier cuisine, dégustation de vin et excursion en bateau.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        .car-info {
+            background: #e8f4e8;
+            padding: 15px;
+            border-radius: 12px;
+            margin: 15px 0;
+            border-left: 4px solid #2c7da0;
+        }
+
+        .car-info h4 {
+            margin: 0 0 10px 0;
+            color: #1e3a5f;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Escape Albania</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>6 Jours au cœur de l'Albanie sauvage<br><span style="font-size: 17px; color: #5e6b7d;">Gjirokaster, Œil
+                    Bleu, Ksamil, Butrint & Tirana</span></h1>
+            <div class="tour-meta">
+                <span><i class="far fa-calendar-alt"></i> 6 jours / 5 nuits</span>
+                <span><i class="fas fa-car"></i> Road-trip en voiture</span>
+                <span><i class="fas fa-horse"></i> Balade à cheval & atelier cuisine</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img
+                            src="https://www.travelsewhere.net/wp-content/uploads/2024/07/DSC_0739-2.jpg"
+                            alt="Gjirokaster">
+                        <div class="carousel-caption">Gjirokaster, ville UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://8d3df2ae.delivery.rocketcdn.me/wp-content/uploads/2026/02/blueeyeart.jpg"
+                            alt="Blue Eye">
+                        <div class="carousel-caption">Œil Bleu (Syri i Kaltër)</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://images.trvl-media.com/place/6193554/396fd241-eb82-467b-94a9-f18daf7e0401.jpg"
+                            alt="Ksamil">
+                        <div class="carousel-caption">Ksamil, perle de la Riviera</div>
+                    </div>
+                    <div class="carousel-slide"><img src="https://ychef.files.bbci.co.uk/1280x720/p0kmf61b.jpg"
+                            alt="Butrint">
+                        <div class="carousel-caption">Butrint, site UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://images.squarespace-cdn.com/content/v1/5940f2725016e1c79e469470/1507288301488-VM8UDWFMQ0NYQKEFXACC/tirana+city+view-min.JPG?format=1500w"
+                            alt="Tirana">
+                        <div class="carousel-caption">Tirana, capitale albanaise</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- VEHICULE INFO -->
+    <div class="container" style="margin-top: 30px;">
+        <div class="car-info">
+            <h4><i class="fas fa-car"></i> Voiture pour le circuit touristique</h4>
+            <p><strong>Daihatsu Terios – 2009</strong> - Économique - Motorisation 1.5 Essence – Boîte automatique –
+                Système de climatisation efficace</p>
+            <p><strong>Chauffeur Asel :</strong> <i class="fab fa-whatsapp"></i> +355 69 39 35 344</p>
+            <p><strong>Caution :</strong> 150 € espèces à remettre au chauffeur (restituée sauf dégâts) – Pensez à
+                prendre photos/vidéos de l’état du véhicule avant la récupération</p>
+        </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                Votre itinéraire : 6 jours au pays des aigles</h2>
+
+            <!-- Jour 1 -->
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1 – 12 août</span> Aéroport de Tirana → Gjirokaster – Dégustation
+                        de vin</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>10h05 :</strong> Atterrissage à l'aéroport de Tirana. <strong>10h45 :</strong>
+                            Récupération du véhicule de location. Départ pour Gjirokastra (trajet ~3h06). Pause déjeuner
+                            à la plage de Golem : poisson frais en bord de mer. Arrivée estimée à Gjirokastra à 17h30.
+                        </p>
+                        <p><strong>18h00 :</strong> Dégustation de vin au domaine viticole 
+                            . Les vins soigneusement sélectionnés s'accompagnent de mets typiques de la
+                            région, pour une expérience authentique aux saveurs du sud de l'Albanie.</p>
+                        <p>Dîner au choix dans un des nombreux restaurants de la ville.</p><br>
+                        <div class="day-image"><img
+                                src="https://eia476h758b.exactdn.com/wp-content/uploads/2023/07/Gjirokastra-Citadel-Castle.jpeg?strip=all"
+                                alt="Gjirokaster"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Guest House</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2 – 13 août</span> Gjirokaster – Atelier cuisine & balade à cheval
+                    </h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>09h00-12h00 :</strong> Visite libre de la ville médiévale et de la forteresse. Au
+                            choix : maison-musée d'Ismail Kadare, demeure Zekate (architecture ottomane), musée
+                            ethnographique.</p>
+                        <p><strong>12h15-15h00 :</strong> Atelier de cuisine traditionnelle albanaise et repas chez
+                            l'habitant à Guest House . Une grand-mère authentique, véritable gardienne des recettes
+                            ancestrales, vous apprendra à préparer des plats typiques.</p>
+                        <p><strong>17h00 :</strong> Balade à cheval (durée 1h30) avec Caravan Horse Riding Albania
+                            . Accompagné d'un guide local passionné à travers sentiers
+                            sinueux bordés de chênes, d'oliviers et de champs sauvages, surplombant la vallée du Drinos.
+                        </p>
+                        <p><strong>19h00 :</strong> Dîner dans un village à quelques minutes de Gjirokastra, au milieu des vignes, des oiseaux et des animaux. Savourez des plats traditionnels albanais préparés avec soin, dans une ambiance chaleureuse et intimiste, où chaque bouchée est une découverte..
+                        </p><br>
+                        <div class="day-image"><img src="https://photos.tpn.to/fh/oj/je/hm/800x450.jpg"
+                                alt="Balade à cheval Gjirokaster"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Guest House </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3 – 14 août</span> Gjirokaster → Œil Bleu → Ksamil</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Visite libre de la source <strong>Blue Eye (Œil Bleu)</strong> – un monument naturel
+                            d'Albanie, source profonde formant une piscine circulaire avec des eaux bleu marine entourée
+                            de grands arbres. Trajet Gjirokastra → Blue Eye : 46 min.</p>
+                        <p>Déjeuner au restaurant <strong>« The Mussel House »</strong> (la maison des moules) à Ksamil
+                            – moules fraîchement récoltées sur place, élevées directement dans les eaux cristallines du
+                            lac. Trajet Blue Eye → The Mussel House : 41 min.</p>
+                        <p>Après-midi baignade à la plage de Ksamil (plages recommandées : Pulebardha Beach, Pema e
+                            Thate Beach).</p>
+                        <p>Dîner au choix dans un des nombreux restaurants de la ville.</p><br>
+                        <div class="day-image"><img
+                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/2d/1e/bd/4e/caption.jpg?w=900&h=-1&s=1"
+                                alt="Blue Eye"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel à Ksamil</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4 – 15 août</span> Ksamil – Baignade & cité antique de Butrint</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>Matinée :</strong> Baignade à Ksamil face aux 3 îles. Conseil : en haute saison,
+                            réservez votre transat la veille ou arrivez tôt le matin.</p>
+                        <p><strong>Après-midi :</strong> Visite libre de la cité antique de Butrint, site inscrit au
+                            patrimoine mondial de l'UNESCO. Butrint dévoile ses ruines impressionnantes : théâtres
+                            romains, basilique chrétienne et murailles fortifiées.</p>
+                        <p>Dîner au choix dans un des nombreux restaurants de la ville.</p><br>
+                        <div class="day-image"><img
+                                src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/0c/34/56/43/autre-paysage.jpg?w=1200&h=-1&s=1"
+                                alt="Butrint"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel à Ksamil</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 5 -->
+            <div class="day-card" id="day5">
+                <div class="day-header" onclick="toggleDay('day5')">
+                    <h3><span class="theme-tag">Jour 5 – 16 août</span> Balade en bateau Ksamil → Tirana</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>10h00 :</strong> Balade en bateau avec – découverte des grottes marines
+                             et criques secrètes. Le bateau vous dépose sur les
+                            petites îles de Ksamil pour une baignade dans le calme, loin des foules.</p>
+                        <p>Déjeuner à Ksamil (restaurant au choix).</p>
+                        <p><strong>Après-midi :</strong> Retour à Tirana, la capitale albanaise. Visite libre de la
+                            capitale : place Skënderbeg, mosquée Et'hem Bey, tour de l'horloge, château de Tirana,
+                            Bunk'Art 2 (bunker musée).</p>
+                        <p><strong>Dîner</strong> à l'un des meilleurs restaurants traditionnels de Tirana</p>
+                        <p><em>En option : sur le trajet de retour, s'arrêter à Jale Beach pour une plongée
+                                sous-marine.</em></p><br>
+                        <div class="day-image"><img
+                                src="https://travel.kalemi.com/wp-content/uploads/2025/06/things-to-do-in-tirana.webp"
+                                alt="Tirana"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Luxury Appartement,
+                                Tirana</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 6 -->
+            <div class="day-card" id="day6">
+                <div class="day-header" onclick="toggleDay('day6')">
+                    <h3><span class="theme-tag">Jour 6 – 17 août</span> Tirana → Aéroport de Tirana</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Départ avion à 8h55. Retour de la voiture à l'aéroport de Rinas-Tirana 2 à 3h avant le vol,
+                            soit entre 05h55 et 06h55.</p>
+                        <p>Fin du voyage, le cœur rempli de beaux souvenirs et d'images inoubliables de votre séjour en
+                            Albanie.</p><br>
+                        <div class="hotel-info"><i class="fas fa-plane-departure"></i> <span>Transfert aéroport :
+                                restitution du véhicule</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓
+                    INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue</li>
+                    <li><i class="fas fa-check-circle"></i> Le séjour en hôtel, Guest House ou appartement (5 nuits)
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> Voiture de location du jour 1 au jour 6 (Daihatsu Terios)
+                    </li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance à distance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Prise en charge du remorquage et mise à disposition d'un
+                        véhicule de remplacement en cas de panne</li>
+                    <li><i class="fas fa-check-circle"></i> Un repas chez l'habitant (atelier cuisine du jour 2)</li>
+                    <li><i class="fas fa-check-circle"></i> Une balade en bateau (jour 5)</li>
+                    <li><i class="fas fa-check-circle"></i> Une balade à cheval (jour 2)</li>
+                    <li><i class="fas fa-check-circle"></i> Dégustation de vin local albanais (jour 1)</li>
+                    <li><i class="fas fa-check-circle"></i> Atelier de cuisine traditionnelle albanaise (jour 2)</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas midi & soir (sauf repas chez l'habitant inclus)
+                    </li>
+                    <li><i class="fas fa-times-circle"></i> Les billets d'accès aux musées/châteaux/cités antiques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- AGENT INFO -->
+    <div class="container" style="margin: 30px auto;">
+
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>6 Jours au cœur de l'Albanie sauvage</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit complet (6 jours / 5 nuits)</span>
+                            <span><strong>€1,290</strong> / personne</span>
+                        </div>
+                        <div
+                            style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix personnalisé incluant hébergements, voiture de
+                            location, petits-déjeuners, balade à cheval, balade en bateau, atelier cuisine et
+                            dégustation de vin.
+                        </div>
+                        <div
+                            style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-user-tie"></i> <strong>Agent de voyage : Mr. DURO David</strong><br> +355
+                            67 67 45 861<br> leguidealbanais@gmail.com
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+
+                        <!-- Dates avec automatisation -->
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(Automatisé pour les 12 et 17
+                                        août)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement (6
+                                    jours).</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="20" value="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Demandes spéciales (régime alimentaire, préférences...)</label>
+                            <textarea id="requests" rows="3"
+                                placeholder="Intolérances alimentaires, besoins spécifiques pour la voiture..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Réponse sous 24h. Vos données sont sécurisées.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+                    <p class="footer__desc">Authentic travel experiences – Road-trip, culture et nature albanaise.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@escapealbania.al</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Escape Albania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ========== EMAILJS CONFIG ==========
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'escape_albania2024';
+        const EMAILJS_TEMPLATE_ID = 'template_3qiaf5k';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ========== CAROUSEL ==========
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+        window.moveSlide = moveSlide;
+
+        // ========== TOGGLE DAYS ==========
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ========== TOGGLE INCLUSION ==========
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FONCTION POUR LES DATES ==========
+        function updateReturnDate() {
+            const startDateInput = document.getElementById('startDate');
+            const endDateInput = document.getElementById('endDate');
+
+            // Data fikse
+            startDateInput.value = '2026-08-12';
+            endDateInput.value = '2026-08-17';
+        }
+
+        // ========== ENVOI EMAILJS ==========
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+
+            if (!name || !email || !phone || !startDate) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'leguidealbanais@gmail.com',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: startDate,
+                    end_date: endDate,
+                    travelers: travelers,
+                    tour_name: '6 jours / 5 nuits au pays des aigles (Gjirokaster, Ksamil, Tirana)',
+                    price: 'Devis personnalisé',
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Demande envoyée avec succès ! Nous vous répondrons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('startDate').value = today;
+                updateReturnDate();
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+
+        // Initialisation des dates
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').value = today;
+        updateReturnDate();
+    </script>
+</body>
+
+</html>

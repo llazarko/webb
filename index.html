@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Albania – Découvrez l'Albanie autrement</title>
+  <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+  <meta name="description" content="Voyages authentiques en Albanie avec guides locaux – circuits premium, petits groupes, expériences uniques.">
+  <!-- Google Fonts : serif élégant / sans-serif moderne -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome 6 (icônes minimales) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <!-- NAVBAR (overlay transparent) -->
+  <header class="navbar js-navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+        <img src="assets/icons/logo.png" alt="Logo Escape Albania" class="navbar__logo-img">
+        <a href="index.html" class="navbar__name">Escape Albania</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="navbar__hamburger js-hamburger" aria-label="Menu" aria-expanded="false">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+
+      <!-- Collapsible menu (center + right) -->
+      <div class="navbar__collapse js-nav-collapse">
+        <nav class="navbar__center" aria-label="Navigation principale">
+          <ul class="navbar__menu">
+            <li><a href="#hero" class="navbar__link">Accueil</a></li>
+            <li><a href="tours.html" class="navbar__link">Circuits</a></li>
+            <li><a href="#about" class="navbar__link">À propos</a></li>
+            <li><a href="#contact" class="navbar__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__right">
+          <div class="navbar__lang">
+            <span class="lang-switcher__item active">FR</span>
+            <span class="lang-switcher__item">EN</span>
+            <span class="lang-switcher__item">NL</span>
+            <span class="lang-switcher__item">DE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO SECTION (fullscreen avec vidéo) -->
+    <section id="hero" class="hero">
+      <div class="hero__background">
+        <!-- Vidéo de héros (remplacez le fichier par votre propre vidéo) -->
+        <video autoplay muted loop playsinline poster="assets/images/albania-header.jpg">
+          <source src="assets/videos/albania-hero.mp4" type="video/mp4">
+          Votre navigateur ne supporte pas la vidéo.
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <div class="hero__heading-wrapper">
+          <h1 class="hero__title">Bienvenue en Albanie</h1>
+        </div>
+        <div class="hero__subtitle-pill">
+          <span>Découvrez les trésors de l'Albanie grâce à nos circuits exclusifs.</span>
+        </div>
+        <div class="hero__buttons">
+          <a href="/tours.html" class="btn btn--primary">Explorer les circuits</a>
+        </div>
+        <a href="#features" class="hero__scroll js-smooth">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+          <span class="sr-only">Défiler vers le bas</span>
+        </a>
+      </div>
+    </section>
+
+    <!-- TOURS SECTION (grid cards) -->
+    <section id="tours" class="tours section section--beige">
+      <div class="container">
+        <h2 class="section__title">Découvrez l'Albanie avec nos experts</h2>
+        <div class="tours__grid">
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card1.jpg" alt="Randonnée dans les Alpes albanaises" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">15 jours au pays des Aigles</h3>
+              <p class="tour-card__desc">Randonnées inoubliables et nuits chez l'habitant.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> 15 jours</span>
+                <a href="/tours-details/15jour.html" class="tour-card__link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card2.jpg" alt="Côte ionienne et villages" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">Aventure dans les Alpes Albanaises</h3>
+              <p class="tour-card__desc">Explorez des paysages sauvages, des villages hors du temps et vivez une immersion authentique au cœur des montagnes albanaises.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> 4 jours</span>
+                <a href="/tours-details/4jour.html" class="tour-card__link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card3.webp" alt="Patrimoine UNESCO à Berat" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title">Voyage au cœur de l’Albanie authentique</h3>
+              <p class="tour-card__desc">Entre villes classées à l’UNESCO, Riviera aux eaux cristallines et
+                    expériences locales, découvrez en 8 jours une Albanie préservée, riche en culture et en
+                    émotions.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> 8 jours</span>
+                <a href="/tours-details/8jour.html" class="tour-card__link">Voir les détails <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tours__cta">
+          <a href="tours.html" class="btn btn--outline-dark">Voir tous nos circuits</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE US (features) -->
+    <section id="features" class="features section">
+      <div class="container">
+        <h2 class="section__title">Vivez l’Albanie comme un local</h2>
+        <div class="features__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-user-tie"></i></div>
+            <h3 class="feature-card__title">Guide francophone local</h3>
+            <p class="feature-card__desc">Vous comprenez tout, vous vivez plus</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-users"></i></div>
+            <h3 class="feature-card__title">Groupes intimistes</h3>
+            <p class="feature-card__desc">Maximum 6-8 personnes</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-landmark"></i></div>
+            <h3 class="feature-card__title">Expériences vraies</h3>
+            <p class="feature-card__desc">Repas chez l’habitant, traditions vivantes</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-route"></i></div>
+            <h3 class="feature-card__title">Voyage sur mesure</h3>
+            <p class="feature-card__desc">Adapté à votre rythme</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ALBANIA (dark green) -->
+    <section id="about" class="why-albania section section--dark">
+      <div class="container">
+        <div class="why-albania__grid">
+          <div class="why-albania__content">
+            <h2 class="section__title section__title--light">L’Albanie, le secret le mieux gardé d’Europe</h2>
+            <ul class="why-albania__list">
+              <li></i> 🏛️ Patrimoine UNESCO et histoire fascinante</li>
+              <li></i> 🌊 Des plages parmi les plus belles de Méditerranée</li>
+              <li></i> ❤️ Une hospitalité que vous n’oublierez jamais</li>
+            </ul>
+          </div>
+          <div class="why-albania__media">
+            <img src="https://www.thenaturaladventure.com/wp-content/uploads/2023/09/best-time-to-go-to-albania-2.jpg" alt="Paysage albanais montagnes et mer" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA SECTION -->
+    <section class="cta section">
+      <div class="container">
+        <h2 class="section__title">Prêt pour l'aventure albanaise ?</h2>
+        <p class="cta__subtitle">Nos experts sont là pour créer le voyage de vos rêves</p>
+        <div class="cta__buttons">
+          <a href="#" class="btn btn--primary">Planifier mon voyage</a>
+          <a href="/tours.html" class="btn btn--outline-dark">Voir les circuits</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <i class="fas fa-mountain"></i> Escape Albania
+          </div>
+          <p class="footer__desc">Voyages premium et authentiques en Albanie, conçus avec passion par des experts locaux.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Liens rapides</h4>
+          <ul class="footer__links">
+            <li><a href="#hero">Accueil</a></li>
+            <li><a href="/tours.html">Circuits</a></li>
+            <li><a href="#about">À propos</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Contact</h4>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Tirana, Albanie</p>
+            <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+            <p><i class="fas fa-envelope"></i> hello@Escape Albania.al</p>
+          </address>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Suivez-nous</h4>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2024 Escape Albania. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>z
+</body>
+</html>

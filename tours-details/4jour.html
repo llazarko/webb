@@ -1,0 +1,467 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aventure dans les Alpes Albanaises | Escape Albania</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="Explore Albania in 15 days: Tirana, Berat, Gjirokastër, Riviera, Butrint. Private guided tour with expert local guides.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Escape Albania</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>Aventure dans les Alpes Albanaises<br><span style="font-size: 17px; color: #5e6b7d;">Tirana, Berat, Riviera &
+                    UNESCO sites</span></h1>
+            <div class="tour-meta">
+                <span><i class="far fa-calendar-alt"></i> 4 days / 3 nights</span>
+                <span><i class="fas fa-users"></i> Un voyage exclusif au cœur d’une nature intacte, entre confort authentique et expériences locales uniques.</span>
+                <span><i class="fas fa-tag"></i>  À partir de 550 euros</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img
+                            src="https://theholisticbackpacker.com/wp-content/uploads/2022/08/MG_1822-1-1140x760.jpg"
+                            alt="Shkoder">
+                        <div class="carousel-caption">Shkoder</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://visitalb.com/cdn/shop/files/LepusheVermoshAlbaniaNorthTourGuideTravelAgencyEuropeSummer2024Discover.png?v=1719925837"
+                            alt="Lepushe">
+                        <div class="carousel-caption">Lepushe</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://testela.travel/wp-content/uploads/2022/05/bjeshket-e-namuna.jpg" alt="Vermosh">
+                        <div class="carousel-caption">Vermosh</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://s2.wklcdn.com/image_136/4082656/57890940/57993449Master.jpg"
+                            alt="Gerben">
+                        <div class="carousel-caption">Gerben</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://alpventurer.com/wp-content/uploads/2025/08/Lepushe-Vajusha-1.jpg"
+                            alt="Hiking Vejushe">
+                        <div class="carousel-caption">Hiking Vejushe</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://bnadventure.com/wp-content/uploads/2023/09/gerbaja-adr3-1-min-scaled.jpg"
+                            alt="Gerbaj">
+                        <div class="carousel-caption">Gerbaj</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- ITINERARY (me foto shtesë pa ndryshuar stilin ekzistues) -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                Votre itinéraire pour 4 jours</h2>
+            <!-- Jour 1 -->
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1</span> Vers les Alpes : Shkodër – Lëpushë – Vermosh</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Votre aventure débute à Shkodër, porte d’entrée des Alpes albanaises. Très vite, la route
+                            laisse place aux paysages sauvages : vallées verdoyantes, forêts et sommets impressionnants.
+                            Arrêt à Lëpushë, une plaine alpine paisible, avant de continuer vers Vermosh, le village le
+                            plus élevé d’Albanie. Balade dans ce décor authentique, puis dîner traditionnel avec
+                            produits locaux et spécialités maison.</p><br>
+                        <div class="day-image"><img src="https://theholisticbackpacker.com/wp-content/uploads/2022/08/MG_1822-1-1140x760.jpg" alt="Shkodër"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Vermosh</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2</span> Hiking panoramique : Vermosh – Gerben – Lëpushë</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Après un petit-déjeuner local, départ pour une randonnée à travers les paysages les plus
+                            préservés des Alpes. Prairies alpines, ruisseaux cristallins et forêt dense accompagnent
+                            votre marche. Découverte d’une cascade cachée, pause nature, puis descente vers Lëpushë pour
+                            une pause gourmande avec spécialités locales.</p><br>
+                        <div class="day-image"><img src="https://visitalb.com/cdn/shop/files/LepusheVermoshAlbaniaNorthTourGuideTravelAgencyEuropeSummer2024Discover.png?v=1719925837" alt="Lepushë"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Lepushë</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3</span> Aventure alpine : Vajushë – Gerbaj</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Cap vers Gerbaj, une région sauvage et encore méconnue. Randonnée depuis Vajushë avec vues
+                            panoramiques à 360° sur les montagnes. Rencontre avec un guide local et découverte de la
+                            nature alpine. Arrivée dans un environnement isolé et paisible, loin de toute agitation.
+                            Dîner traditionnel dans une ambiance authentique.</p><br>
+                        <div class="day-image"><img src="https://bnadventure.com/wp-content/uploads/2023/09/gerbaja-adr3-1-min-scaled.jpg" alt="Vajushë"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée à Gerbaj</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4</span> Retour : Gerbaj – Shkodër</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Réveil au cœur des montagnes, dans une atmosphère calme et naturelle. Dernière promenade dans
+                            les paysages alpins avant de reprendre la route vers Shkodër. Retour avec des souvenirs
+                            forts et une immersion complète dans l’Albanie authentique.</p><br>
+                        <div class="day-image"><img src="https://lovinalbania.com/wp-content/uploads/2025/06/rruga-kole-idromeno-shkoder.jpg" alt="Shkodër"></div>
+                        <div class="hotel-info"><i class="fas fa-car"></i> <span>Retour vers Shkodër</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION TOGGLE -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓
+                    INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue</li>
+                    <li><i class="fas fa-check-circle"></i> Hébergement en hôtel, Guest House ou chalet</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Une balade en bateau à Himara</li>
+                    <li><i class="fas fa-check-circle"></i> Voiture de location</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Atelier de cuisine traditionnelle et un repas chez
+                        l'habitant</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas du midi et du soir</li>
+                    <li><i class="fas fa-times-circle"></i> Les assurances (santé, annulation, voyage, etc.)</li>
+                    <li><i class="fas fa-times-circle"></i> Les billets d'accès aux sites historiques</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SECTION - Version "Get a Quote" -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>Aventure dans les Alpes Albanaises</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit (4 jours / 3 nuits)</span>
+                            <span><strong>€550</strong> / personne</span>
+                        </div>
+                        <div
+                            style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix par personne. Pour les groupes, contactez-nous pour
+                            un devis personnalisé.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(automatique - modifiable)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement (4 jours), vous pouvez la modifier.</small>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="10" value="1"
+                                placeholder="Combien de personnes ?">
+                            <small style="display: block; margin-top: 5px; color: #666;">Pour les groupes, nous vous
+                                contacterons pour ajuster le total.</small>
+                        </div>
+                        <div class="form-group">
+                            <label>Demandes spéciales</label>
+                            <textarea id="requests" rows="3"
+                                placeholder="Régime alimentaire, préférences d'hébergement..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Vous recevrez un email de confirmation sous 24h. Vos informations seront envoyées à notre
+                            équipe.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+                    <p class="footer__desc">Premium authentic travel in Albania, designed with local experts.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Quick Links</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@escapealbania.al</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2024 Escape Albania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ==================== INICIALIZIMI EMAILJS ====================
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'escape_albania2024';
+        const EMAILJS_TEMPLATE_ID = 'template_3qiaf5k';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ==================== KARUSELI ====================
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+
+        // ==================== TOGGLE DITËT ====================
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ==================== TOGGLE INCLUSION/EXCLUSION ====================
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FUNKSIONET PËR DATAT ==========
+        function updateReturnDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDateInput = document.getElementById('endDate');
+            if (startDate) {
+                const start = new Date(startDate);
+                // Shtojmë 3 ditë (për turin me 4 ditë)
+                const returnDate = new Date(start);
+                returnDate.setDate(start.getDate() + 3);
+                const year = returnDate.getFullYear();
+                const month = String(returnDate.getMonth() + 1).padStart(2, '0');
+                const day = String(returnDate.getDate()).padStart(2, '0');
+                endDateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ==================== DËRGIMI I TË DHËNAVE NË EMAILJS ====================
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const date = document.getElementById('startDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+
+            if (!name || !email || !phone || !date) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'booking@escapealbania.al',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: date,
+                    travelers: travelers,
+                    tour_name: '15 jours au pays des Aigles',
+                    price: '€1,290 per person',
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Votre demande a été envoyée avec succès ! Nous vous contacterons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                document.getElementById('startDate').value = new Date().toISOString().split('T')[0];
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ==================== MENUJA HAMBURGER ====================
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+
+        // ==================== DATA PARAZGJEDHJE ====================
+        const today = new Date().toISOString().split('T')[0];
+        const startDateInput = document.getElementById('startDate');
+        if (startDateInput) {
+            startDateInput.value = today;
+        }
+    </script>
+</body>
+
+</html>

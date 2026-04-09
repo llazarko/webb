@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>13 jours au pays des aigles | Le Guide Albanais</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="13 jours en Albanie : Kruje, Theth, Shkoder, Berat, Apollonia, Llogara, Butrint, Ksamil, Sarande, œil bleu, Permet, Lin, Tirana. Road-trip complet avec hébergements 4 étoiles, tentes au bord de mer, rafting, tyrolienne et découvertes authentiques.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Le Guide Albanais</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>13 JOURS / 12 NUITS AU PAYS DES AIGLES<br><span style="font-size: 17px; color: #5e6b7d;">Kruje, Theth,
+                    Shkoder, Berat, Apollonia, Llogara, Butrint, Ksamil, Sarande, Œil Bleu, Permet, Lin & Tirana</span>
+            </h1>
+            <div class="tour-meta">
+                <span><i class="far fa-calendar-alt"></i> 13 jours / 12 nuits</span>
+                <span><i class="fas fa-car"></i> Road-trip complet</span>
+                <span><i class="fas fa-mountain"></i> Nature, culture & aventure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img src="/assets/images/tour1/kruja.webp" alt="Kruje">
+                        <div class="carousel-caption">Kruje, ville médiévale</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.snoezelsontheroad.com/wp-content/uploads/2024/03/coverfoto-Theth-scaled.jpg"
+                            alt="Theth">
+                        <div class="carousel-caption">Theth, Alpes albanaises</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://culturetrekking.com/images/img_P1vKF5yKeoBgQCxVsqwkHi/berat-96.jpg?fit=outside&w=1600&h=900"
+                            alt="Berat">
+                        <div class="carousel-caption">Berat, ville aux mille fenêtres</div>
+                    </div>
+                    <div class="carousel-slide"><img src="https://ychef.files.bbci.co.uk/1280x720/p0kmf61b.jpg"
+                            alt="Butrint">
+                        <div class="carousel-caption">Butrint, site UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.albaniatourism.org/wp-content/uploads/2017/08/ksamil.jpg" alt="Ksamil">
+                        <div class="carousel-caption">Ksamil, perle de la Riviera</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://chasingthedonkey.b-cdn.net/wp-content/uploads/2021/12/lue-eye-spring-near-Sarande-Albania_Depositphotos_380727456_S-900x601.jpeg"
+                            alt="Œil Bleu">
+                        <div class="carousel-caption">Œil Bleu (Syri i Kaltër)</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                Votre itinéraire : 13 jours au pays des aigles</h2>
+
+            <!-- Jour 1 -->
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1 – 26 juin</span> Aéroport de Tirana → Kruje</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Arrivée à l'aéroport de Tirana et transfert à la ville médiévale de Kruja, l'une des
+                            principales villes historiques de l'Albanie. Installation et première découverte de cette
+                            cité chargée d'histoire.</p><br>
+                        <div class="day-image"><img
+                                src="https://i0.wp.com/thepartyingtraveler.com/wp-content/uploads/2024/06/IMG_6361.jpg?resize=900%2C675&ssl=1"
+                                alt="Kruje"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Kruje</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2 – 27 juin</span> Kruje – Mrizi i Zanave – Theth</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p><strong>Matinée :</strong> Visite de Kruja, centre de la résistance albanaise contre l'empire
+                            Ottoman sous le héros national Scanderbeg. Visite du vieux "Pazar" (bazar traditionnel).</p>
+                        <p><strong>Déjeuner</strong> au meilleur restaurant traditionnel d'Albanie « Mrizi i Zanave »
+                            (Kruja → Mrizi i Zanave : 1h07 - 63 km). Visite de la ferme pour découvrir la production de
+                            fromage, vin et confiture.</p>
+                        <p><strong>Après-midi :</strong> Continuation vers le parc national de Theth (Mrizi i Zanave →
+                            Theth : 2h27 - 108 km). Arrêt à Qafë Thore (1700 m d'altitude) offrant un paysage alpin
+                            exceptionnel.</p><br>
+                        <div class="day-image"><img
+                                src="https://xhuliocooks.com/wp-content/uploads/2022/06/Mrizi-i-Zanave-Restaurant-Review-1024x473.jpg"
+                                alt="Kruje"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Villa Molla, Theth</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3 – 28 juin</span> Theth – Randonnée dans les Alpes albanaises</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Journée dédiée à la découverte de Theth : visite de l'église catholique, de la tour
+                            d'isolement (Kulla) et de la cascade Grunasit. Randonnée au cœur des Alpes albanaises pour
+                            découvrir d'autres attractions naturelles exceptionnelles.</p><br>
+                        <div class="day-image"><img
+                                src="https://eia476h758b.exactdn.com/wp-content/uploads/2020/02/Thethi-Northen-Albanian-Alps-1024x683.jpeg?strip=all"
+                                alt="Theth"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : 2ème nuit à Villa Molla,
+                                Theth</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4 – 29 juin</span> Theth → Shkoder – Vélo au bord du lac</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Theth → Shkoder : 1h57 - 76 km. Itinéraire à vélo le long du lac de Shkoder, l'un des plus
+                            grands lacs des Balkans. Découverte de la ville et de sa célèbre forteresse Rozafa.</p><br>
+                        <div class="day-image"><img
+                                src="https://gte-gcms.images.tshiftcdn.com/AI0DIWHkBQZyx6oBkSd3hz/resize=width:2048,fit:max/8vE5PqZkQVuK0bepIfqx?dpr=2&height=360&quality=65"
+                                alt="Shkoder"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel Rozafa 4 étoiles,
+                                Shkoder</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 5 -->
+            <div class="day-card" id="day5">
+                <div class="day-header" onclick="toggleDay('day5')">
+                    <h3><span class="theme-tag">Jour 5 – 30 juin</span> Shkoder → Berat – Kayak sur l'Osum</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Shkoder → Berat : 3h - 200 km. Découverte de Berat, classée UNESCO. Pour les aventuriers :
+                            kayak ou randonnée aquatique le long de la pittoresque rivière Osumi.</p><br>
+                        <div class="day-image"><img
+                                src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEgD6XgPZBgceR93j7ap6dx-ttIIJqn9ZEXLJkjNesNLrkCyO6ShCEQfGnItl82oAvVckvWFMlAUep2P_vzP_WaDqrgRjeKGtVqCrBsYsH3sVJwAtwGF9w_IrVb2LAU7UvWNCyGjw-o7qbCR/s2048/_MBA6182.jpg"
+                                alt="Berat"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel Mangalem 4 étoiles,
+                                Berat</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 6 -->
+            <div class="day-card" id="day6">
+                <div class="day-header" onclick="toggleDay('day6')">
+                    <h3><span class="theme-tag">Jour 6 – 1 juillet</span> Apollonia – Zvernec – Vlora</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Berat → Apollonia : 1h06 - 70 km. Visite du parc archéologique d'Apollonia (fondée au VIIe
+                            siècle av. JC) : murs fortifiés, théâtre, nympheum et musée dans un monastère du XIVe
+                            siècle.</p>
+                        <p>Apollonia → Zvernec : 38 min - 42 km. Découverte de l'île de Zvernec, sublime et calme –
+                            idéale au coucher du soleil.</p>
+                        <p>Zvernec → Vlora : 22 min - 12 km. Nuitée à Vlora.</p><br>
+                        <div class="day-image"><img
+                                src="https://ecotouralbania.com/wp-content/uploads/2022/07/Apollonia-2.jpg"
+                                alt="Apollonia"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel 4 étoiles,
+                                Vlora</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 7 -->
+            <div class="day-card" id="day7">
+                <div class="day-header" onclick="toggleDay('day7')">
+                    <h3><span class="theme-tag">Jour 7 – 2 juillet</span> Llogara – Lukove – Nuit sous tente</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Vlora → Llogara : 1h - 46 km. Parc naturel de Llogara : forêts luxuriantes en bord de mer et
+                            vues panoramiques à couper le souffle.</p>
+                        <p>Llogara → Lukove : 1h25 - 60 km. Nuit dans des tentes idéalement installées en bord de plage,
+                            offrant une vue imprenable et un accès direct aux eaux cristallines de la mer Ionienne.</p>
+                        <br>
+                        <div class="day-image"><img
+                                src="https://ecotouralbania.com/wp-content/uploads/2022/07/LLOGARA-NATIONAL-PARK-6.jpg"
+                                alt="Llogara"></div>
+                        <div class="hotel-info"><i class="fas fa-campground"></i> <span>Hébergement : Nuit sous tente au
+                                bord de la mer</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 8 -->
+            <div class="day-card" id="day8">
+                <div class="day-header" onclick="toggleDay('day8')">
+                    <h3><span class="theme-tag">Jour 8 – 3 juillet</span> Butrint – Ksamil – Sarande</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Lukove → Butrint : 47 min - 38 km. Visite du parc archéologique de Butrint, patrimoine
+                            mondial UNESCO depuis 1992.</p>
+                        <p>Butrint → Ksamil : 10 min - 5 km. Déjeuner à Ksamil : dégustation de moules produites dans le
+                            lac Butrinti, fruits de mer et poisson frais. Temps libre pour profiter de la plage.</p><br>
+                        <div class="day-image"><img
+                                src="https://media-cdn.tripadvisor.com/media/photo-c/1280x250/0c/34/56/43/autre-paysage.jpg"
+                                alt="Butrint"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel à Sarande</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 9 -->
+            <div class="day-card" id="day9">
+                <div class="day-header" onclick="toggleDay('day9')">
+                    <h3><span class="theme-tag">Jour 9 – 4 juillet</span> Sarande – Excursion en bateau</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Excursion en bateau pour découvrir les canyons Gjipe, les grottes des Pirates et de
+                            Pellumbas. Baignade dans des criques secrètes aux eaux cristallines.</p><br>
+                        <div class="day-image"><img
+                                src="https://media-cdn.tripadvisor.com/media/attractions-splice-spp-720x480/13/2c/ae/21.jpg"
+                                alt="Sarande boat"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : 2ème nuit à
+                                Sarande</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 10 -->
+            <div class="day-card" id="day10">
+                <div class="day-header" onclick="toggleDay('day10')">
+                    <h3><span class="theme-tag">Jour 10 – 5 juillet</span> Œil Bleu – Gjirokaster</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Sarande → Œil Bleu : 34 min - 22 km. Randonnée à la source Blue Eye (Syri i Kaltër), monument
+                            naturel d'Albanie aux eaux bleu profond.</p>
+                        <p>Œil Bleu → Gjirokaster : 48 min - 36 km. Découverte de Gjirokaster, ville UNESCO aux ruelles
+                            particulières et à l'architecture ottomane préservée.</p><br>
+                        <div class="day-image"><img
+                                src="https://eia476h758b.exactdn.com/wp-content/uploads/2023/12/Blue-eye-spring-near-Sarande-Albania.jpeg"
+                                alt="Œil Bleu"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel 4 étoiles,
+                                Gjirokaster</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 11 -->
+            <div class="day-card" id="day11">
+                <div class="day-header" onclick="toggleDay('day11')">
+                    <h3><span class="theme-tag">Jour 11 – 6 juillet</span> Permet – Eaux thermales de Benje – Rafting –
+                        Farma Sotira</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Gjirokaster → Permet : 1h42 - 58 km. Visite et baignade dans les eaux thermales de Benje.
+                            Randonnée le long du canyon et session de rafting.</p>
+                        <p>Permet → Farma Sotira : 2h37 - 96 km. Déjeuner à Farma Sotira, située au cœur du parc
+                            national. Balade à cheval accompagnée d'un guide local à travers des paysages sauvages.</p>
+                        <br>
+                        <div class="day-image"><img
+                                src="https://albaniannight.com/wp-content/uploads/2025/12/Benja-Thermal-Baths-in-Langarica-Canyon-min-scaled.jpeg"
+                                alt="Benje Thermal"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Chalet à Farma
+                                Sotira</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 12 -->
+            <div class="day-card" id="day12">
+                <div class="day-header" onclick="toggleDay('day12')">
+                    <h3><span class="theme-tag">Jour 12 – 7 juillet</span> Lin (lac d'Ohrid) – Tirana – Repas chez
+                        l'habitant</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Farma Sotira → Lin : 2h30 - 127 km. Balade le long du lac d'Ohrid du côté albanais, à Lin,
+                            village pittoresque aux vues imprenables.</p>
+                        <p>Lin → Tirana : 2h - 109 km. Repas traditionnel albanais chez l'habitant à Lin avant transfert
+                            à l'hôtel à Tirana.</p><br>
+                        <div class="day-image"><img
+                                src="https://eia476h758b.exactdn.com/wp-content/uploads/2025/07/Lin-Village-Albania.jpg?strip=all&w=2560"
+                                alt="Lac d'Ohrid"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Hébergement : Hôtel Senator 4 étoiles,
+                                Tirana</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 13 -->
+            <div class="day-card" id="day13">
+                <div class="day-header" onclick="toggleDay('day13')">
+                    <h3><span class="theme-tag">Jour 13 – 8 juillet</span> Tirana – Tyrolienne – Aéroport</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Pour terminer ce circuit touristique, expérience inoubliable : la plus longue tyrolienne des
+                            Balkans. Vous serez ensuite accompagné par notre guide à l'aéroport de Tirana pour votre vol
+                            retour.</p><br>
+                        <div class="hotel-info"><i class="fas fa-plane-departure"></i> <span>Transfert aéroport
+                                inclus</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓
+                    INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Organisation et réservations</li>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue</li>
+                    <li><i class="fas fa-check-circle"></i> Mise à disposition des tentes</li>
+                    <li><i class="fas fa-check-circle"></i> Mise à disposition de vélos</li>
+                    <li><i class="fas fa-check-circle"></i> Mise à disposition de la voiture de location</li>
+                    <li><i class="fas fa-check-circle"></i> Séjour en hôtel/chalets/tentes pour 12 nuits</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les billets d'accès aux sites touristiques</li>
+                    <li><i class="fas fa-check-circle"></i> Guide et assistance à distance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Transports aéroport → hôtel et hôtel → aéroport</li>
+                    <li><i class="fas fa-check-circle"></i> Un repas chez l'habitant</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas midi & soir</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>13 jours / 12 nuits au pays des aigles</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit complet (13 jours / 12 nuits)</span>
+                            <span class="price"><strong>890€</strong> / personne</span>
+                        </div>
+                        <div
+                            style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix par personne. Pour les groupes, contactez-nous pour
+                            un devis
+                            personnalisé.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(automatique -
+                                        modifiable)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement
+                                    (13 jours), vous pouvez la modifier.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="20" value="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Demandes spéciales (régime alimentaire, préférences...)</label>
+                            <textarea id="requests" rows="3"
+                                placeholder="Intolérances alimentaires, besoins spécifiques..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Réponse sous 24h. Vos données sont sécurisées.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Le Guide Albanais</div>
+                    <p class="footer__desc">Voyages authentiques en Albanie – Culture, nature et aventures.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fab fa-whatsapp"></i> +33 7 67 95 42 07</p>
+                        <p><i class="far fa-envelope"></i> leguidealbanais@gmail.com</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Le Guide Albanais. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ========== EMAILJS CONFIG ==========
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'escape_albania2024';
+        const EMAILJS_TEMPLATE_ID = 'template_3qiaf5k';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ========== CAROUSEL ==========
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+        window.moveSlide = moveSlide;
+
+        // ========== TOGGLE DAYS ==========
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ========== TOGGLE INCLUSION ==========
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FONCTION POUR LES DATES ==========
+        function updateReturnDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDateInput = document.getElementById('endDate');
+            if (startDate) {
+                const start = new Date(startDate);
+                const returnDate = new Date(start);
+                returnDate.setDate(start.getDate() + 12);
+                const year = returnDate.getFullYear();
+                const month = String(returnDate.getMonth() + 1).padStart(2, '0');
+                const day = String(returnDate.getDate()).padStart(2, '0');
+                endDateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ========== ENVOI EMAILJS ==========
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+
+            if (!name || !email || !phone || !startDate) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'leguidealbanais@gmail.com',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: startDate,
+                    end_date: endDate,
+                    travelers: travelers,
+                    tour_name: '13 jours / 12 nuits au pays des aigles (circuit complet Albanie)',
+                    price: 'Devis personnalisé',
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Demande envoyée avec succès ! Nous vous répondrons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('startDate').value = today;
+                updateReturnDate();
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+
+        // Initialisation des dates
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').value = today;
+        updateReturnDate();
+    </script>
+</body>
+
+</html>

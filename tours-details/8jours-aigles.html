@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Jours au pays des aigles | Escape Albania</title>
+    <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+    <meta name="description"
+        content="8 jours en Albanie : Tirana, Apollonia, Berat, Riviera d'Himara, Gjirokaster. Découverte culturelle, plages, agrotourisme et expériences authentiques.">
+    <link rel="stylesheet" href="/css/toursdetail.css">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/index.html" class="logo">Escape Albania</a>
+            <div class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/tours.html">Tours</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- PAGE TITLE -->
+    <div class="page-title">
+        <div class="container">
+            <h1>8 Jours au pays des aigles<br><span style="font-size: 17px; color: #5e6b7d;">Tirana, Apollonia, Berat, Riviera d'Himara & Gjirokaster</span></h1>
+            <div class="tour-meta">
+                <span><i class="far fa-calendar-alt"></i> 8 jours / 7 nuits</span>
+                <span><i class="fas fa-umbrella-beach"></i> Culture, Plages & Gastronomie</span>
+                <span><i class="fas fa-tag"></i> Circuit premium sur mesure</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- CAROUSEL -->
+    <div class="carousel-section">
+        <div class="container">
+            <div class="carousel-container">
+                <div class="carousel-track" id="carouselTrack">
+                    <div class="carousel-slide"><img
+                            src="https://travel.kalemi.com/wp-content/uploads/2025/06/things-to-do-in-tirana.webp"
+                            alt="Tirana">
+                        <div class="carousel-caption">Tirana, capitale albanaise</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.historyhit.com/app/uploads/bis-images/5149632/Apollonia-788x537.jpg?x15201"
+                            alt="Apollonia">
+                        <div class="carousel-caption">Site archéologique d'Apollonia</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://kristatheexplorer.com/wp-content/uploads/2024/06/New-Bridge-of-Berat-edited-scaled.jpg"
+                            alt="Berat">
+                        <div class="carousel-caption">Berat, ville UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://www.albaniatravelguide.net/wp-content/uploads/2024/06/himare-aquarium.jpg"
+                            alt="Himara">
+                        <div class="carousel-caption">Himara, Riviera albanaise</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/23/b3/04/da/caption.jpg?w=1200&h=-1&s=1"
+                            alt="Gjirokaster">
+                        <div class="carousel-caption">Gjirokaster, ville UNESCO</div>
+                    </div>
+                    <div class="carousel-slide"><img
+                            src="https://images.squarespace-cdn.com/content/v1/5cac97ac16b640584a4435a3/1556896282784-E78ZZF38267RMM29MGEX/20785855_10155545101109536_7801457713419427695_o.jpg"
+                            alt="Camp Nivica">
+                        <div class="carousel-caption">Camp Nivica - Nature sauvage</div>
+                    </div>
+                </div>
+                <div class="carousel-arrow arrow-left" onclick="moveSlide(-1)"><i class="fas fa-chevron-left"></i></div>
+                <div class="carousel-arrow arrow-right" onclick="moveSlide(1)"><i class="fas fa-chevron-right"></i>
+                </div>
+            </div>
+            <div class="carousel-dots" id="carouselDots"></div>
+        </div>
+    </div>
+
+    <!-- ITINERARY -->
+    <div class="itinerary-section">
+        <div class="container">
+            <h2 style="font-family: var(--font-serif); font-size: 2.5rem; margin-bottom: 40px; color: var(--primary);">
+                Votre itinéraire pour 8 jours</h2>
+
+            <!-- Jour 1 -->
+            <div class="day-card active" id="day1">
+                <div class="day-header" onclick="toggleDay('day1')">
+                    <h3><span class="theme-tag">Jour 1</span> Arrivée à Tirana – Dîner traditionnel</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-up"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Arrivée à Tirana, capitale dynamique de l'Albanie. Soirée agréable dans le meilleur restaurant traditionnel de la ville pour découvrir les saveurs locales. Installation dans un appartement de luxe au cœur de Tirana.</p><br>
+                        <div class="day-image"><img src="https://showmebus.com/wp-content/uploads/2024/07/albania-tirana-piazza-hd.jpg" alt="Tirana"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée : Tirana Center Luxury Modern Apartment</span></div>
+                        <div class="contact-info"><i class="fab fa-whatsapp"></i> Contact : Lirza +355 68 200 40 71</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 2 -->
+            <div class="day-card" id="day2">
+                <div class="day-header" onclick="toggleDay('day2')">
+                    <h3><span class="theme-tag">Jour 2</span> Plages de l'Adriatique – Visite guidée de Tirana</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Matinée détente sur les plages de sable fin de la mer Adriatique pour une baignade relaxante. Déjeuner local savoureux. L'après-midi, plongez dans l'histoire et la culture de Tirana lors d'une visite guidée fascinante. Dîner dans l'un des meilleurs restaurants albanais avec dégustation de mets traditionnels.</p><br>
+                        <div class="day-image"><img src="https://cdn.hometogo.net/assets/media/original/20251001/68dd2610e6344.jpg" alt="Plage Adriatique"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Deuxième nuit : Tirana Center Luxury Modern Apartment</span></div>
+                        <div class="contact-info"><i class="fab fa-whatsapp"></i> Contact : Lirza +355 68 200 40 71</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 3 -->
+            <div class="day-card" id="day3">
+                <div class="day-header" onclick="toggleDay('day3')">
+                    <h3><span class="theme-tag">Jour 3</span> Apollonia – Agrotourisme à Roshnik (ALPETA)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Matinée : visite du site archéologique d'Apollonia, témoignant de l'histoire ancienne de l'Albanie. L'après-midi, immersion dans l'agrotourisme avec la découverte du village de Roshnik. Déjeuner ou dîner dans un restaurant d'agrotourisme réputé à Roshnik, ALPETA.</p><br>
+                        <div class="day-image"><img src="https://www.reflectionsenroute.com/wp-content/uploads/2016/06/Albania-1-72-1024x682.jpg.webp" alt="Apollonia"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée : ALPETA, Roshnik</span></div>
+                        <div class="contact-info"><i class="fab fa-whatsapp"></i> Contact : +355 68 60 89 293</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 4 -->
+            <div class="day-card" id="day4">
+                <div class="day-header" onclick="toggleDay('day4')">
+                    <h3><span class="theme-tag">Jour 4</span> Berat UNESCO – Himara (Riviera)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Découverte de la ville historique de Berat inscrite au patrimoine mondial de l'UNESCO, avec la visite de son impressionnant château, symbole de la "ville aux mille fenêtres". L'après-midi, cap sur Himara, un joyau de la Riviera albanaise.</p><br>
+                        <div class="day-image"><img src="https://images.squarespace-cdn.com/content/v1/53172b1be4b0cc8a5401db4a/8e29eed4-8f23-4b34-a304-28d255803fcc/411A6050.jpg" alt="Berat"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée : Hôtel Sea View, Himara</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 5 -->
+            <div class="day-card" id="day5">
+                <div class="day-header" onclick="toggleDay('day5')">
+                    <h3><span class="theme-tag">Jour 5</span> Excursion en bateau – Crique d'Aquarium – Camp Nivica</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Excursion en bateau pour explorer les criques cachées et baignades dans des eaux cristallines (départ à 10h à Himara). Deuxième partie de la journée : randonnée légère jusqu'à la crique d'Aquarium, un lieu paisible pour se baigner. En soirée, arrivée au Camp Nivica.</p><br>
+                        <div class="day-image"><img src="https://boatripalbania.com/wp-content/uploads/2024/05/Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-Copy-of-JA-KUSH-IKEN-SOT-1.jpg" alt="Himara boat"></div>
+                        <div class="hotel-info"><i class="fas fa-campground"></i> <span>Nuitée : Camp Nivica</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 6 -->
+            <div class="day-card" id="day6">
+                <div class="day-header" onclick="toggleDay('day6')">
+                    <h3><span class="theme-tag">Jour 6</span> Camp Nivica – Gjirokastra (atelier cuisine)</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Journée complète au Camp Nivica avec randonnées et découvertes de paysages naturels exceptionnels. Demi-pension incluse (petit-déjeuner et déjeuner). L'après-midi, direction la ville de Gjirokastra pour une immersion dans la culture locale. Atelier de cuisine traditionnelle et découverte du café local préparé de manière traditionnelle.</p><br>
+                        <div class="day-image"><img src="https://live.staticflickr.com/65535/52528121474_0b5e12e79a_b.jpg" alt="Camp Nivica"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Nuitée : Bujtina Lengo, Gjirokastra (maison traditionnelle)</span></div>
+                        <div class="contact-info"><i class="fab fa-whatsapp"></i> Contact : +355 67 67 45 861</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 7 -->
+            <div class="day-card" id="day7">
+                <div class="day-header" onclick="toggleDay('day7')">
+                    <h3><span class="theme-tag">Jour 7</span> Château de Gjirokastra – Restaurant The Barrels</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Deuxième journée à Gjirokastra : visite du château surplombant la ville et découverte du musée ethnographique. Déjeuner dans un restaurant authentique au cœur des vignes, « The Barrels », offrant une expérience culinaire unique. Deuxième nuit dans la charmante maison traditionnelle Bujtina Lengo.</p><br>
+                        <div class="day-image"><img src="https://www.albania.al/wp-content/uploads/2021/07/gjirokaster.jpg" alt="Gjirokaster Castle"></div>
+                        <div class="hotel-info"><i class="fas fa-bed"></i> <span>Deuxième nuit : Bujtina Lengo, Gjirokastra</span></div>
+                        <div class="contact-info"><i class="fab fa-whatsapp"></i> Contact : +355 67 67 45 861</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Jour 8 -->
+            <div class="day-card" id="day8">
+                <div class="day-header" onclick="toggleDay('day8')">
+                    <h3><span class="theme-tag">Jour 8</span> Retour à Tirana – Transfert aéroport</h3>
+                    <span class="toggle-icon"><i class="fas fa-chevron-down"></i></span>
+                </div>
+                <div class="day-content">
+                    <div class="day-content-inner">
+                        <p>Retour à Tirana pour le transfert vers l'aéroport, après une semaine inoubliable de découvertes et d'aventures au cœur du pays des aigles.</p><br>
+                        <div class="hotel-info"><i class="fas fa-plane-departure"></i> <span>Transfert aéroport inclus</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- INCLUSION/EXCLUSION -->
+    <div class="inclusion-toggle-section">
+        <div class="container">
+            <div class="toggle-buttons">
+                <button class="toggle-btn active" id="showIncluded" onclick="showInclusion('included')">✓ INCLUS</button>
+                <button class="toggle-btn" id="showExcluded" onclick="showInclusion('excluded')">✗ NON INCLUS</button>
+            </div>
+            <div class="inclusion-content active" id="includedContent">
+                <ul>
+                    <li><i class="fas fa-check-circle"></i> Conception et élaboration du circuit</li>
+                    <li><i class="fas fa-check-circle"></i> Organisation et réservations (hôtels, guest houses, camp)</li>
+                    <li><i class="fas fa-check-circle"></i> Cadeau de bienvenue pour chaque voyageur (offert)</li>
+                    <li><i class="fas fa-check-circle"></i> Visite guidée de Tirana avec guide local (offerte)</li>
+                    <li><i class="fas fa-check-circle"></i> Excursion en bateau à Himara</li>
+                    <li><i class="fas fa-check-circle"></i> Atelier de cuisine traditionnelle à Gjirokastra</li>
+                    <li><i class="fas fa-check-circle"></i> Le séjour en appartement de luxe/hôtel/guest house/camp pour 7 nuits</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les petits-déjeuners</li>
+                    <li><i class="fas fa-check-circle"></i> Demi-pension au Camp Nivica (déjeuner inclus)</li>
+                    <li><i class="fas fa-check-circle"></i> Tous les billets d'accès aux sites touristiques (Apollonia, Berat, château Gjirokastra, musée)</li>
+                    <li><i class="fas fa-check-circle"></i> Assistance à distance 24h/24</li>
+                    <li><i class="fas fa-check-circle"></i> Transports aéroport→hôtel et hôtel→aéroport</li>
+                    <li><i class="fas fa-check-circle"></i> Voiture de location avec chauffeur ou véhicule privé selon devis</li>
+                </ul>
+            </div>
+            <div class="inclusion-content" id="excludedContent">
+                <ul>
+                    <li><i class="fas fa-times-circle"></i> Les vols internationaux</li>
+                    <li><i class="fas fa-times-circle"></i> Les dépenses personnelles</li>
+                    <li><i class="fas fa-times-circle"></i> Les repas non mentionnés (dîners sauf jour 1, déjeuners sauf jour 6)</li>
+                    <li><i class="fas fa-times-circle"></i> Les assurances (santé, annulation, bagages)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- BOOKING SECTION -->
+    <div class="booking-section">
+        <div class="container">
+            <div class="booking-wrapper">
+                <div class="package-info">
+                    <h3>8 jours au pays des aigles</h3>
+                    <div class="price-breakdown">
+                        <div class="price-row">
+                            <span>Circuit complet (8 jours / 7 nuits)</span>
+                            <span class="price"><strong>€1,290</strong> / personne  </span>
+
+                        </div>
+                        <div style="margin: 20px 0; background: #eef2f6; padding: 15px; border-radius: 40px; text-align: center;">
+                            <i class="fas fa-info-circle"></i> Prix personnalisé incluant hébergements de charme, petits-déjeuners, excursions, transferts et entrées aux sites.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="booking-form">
+                    <h3 style="font-family: var(--font-serif); margin-bottom: 25px;">Demande de devis</h3>
+                    <form id="bookingForm">
+                        <div class="form-group">
+                            <label>Nom complet *</label>
+                            <input type="text" id="fullName" placeholder="Jean Dupont" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Adresse email *</label>
+                            <input type="email" id="email" placeholder="jean@example.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label>Téléphone *</label>
+                            <input type="tel" id="phone" placeholder="+33 6 12 34 56 78" required>
+                        </div>
+
+                        <!-- Dates avec automatisation -->
+                        <div class="date-group">
+                            <div class="form-group">
+                                <label>Date de départ *</label>
+                                <input type="date" id="startDate" required onchange="updateReturnDate()">
+                            </div>
+                            <div class="form-group">
+                                <label>Date de retour <span style="font-size:12px;">(automatique - modifiable)</span></label>
+                                <input type="date" id="endDate">
+                                <small style="display: block; margin-top: 5px; color: #666;">Calculée automatiquement (8 jours), vous pouvez la modifier.</small>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label>Nombre de voyageurs</label>
+                            <input type="number" id="travelers" min="1" max="20" value="2">
+                        </div>
+
+                        <div class="form-group">
+                            <label>Demandes spéciales (régime alimentaire, préférences d'hébergement...)</label>
+                            <textarea id="requests" rows="3" placeholder="Intolérances alimentaires, allergies, besoin d'un logement spécifique..."></textarea>
+                        </div>
+                        <button type="button" class="btn-send" id="sendButton">
+                            <i class="fas fa-paper-plane"></i> Envoyer la demande
+                        </button>
+                        <p class="secure-note" style="text-align: center; font-size: 0.85rem; margin-top: 10px;">
+                            Réponse sous 24h. Vos données sont sécurisées.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div class="footer__col">
+                    <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+                    <p class="footer__desc">Authentic travel experiences – Culture, plages et traditions albanaises.</p>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="/index.html">Home</a></li>
+                        <li><a href="/tours.html">Tours</a></li>
+                        <li><a href="/#about">About</a></li>
+                        <li><a href="/#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Contact</h4>
+                    <address>
+                        <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+                        <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+                        <p><i class="fas fa-envelope"></i> hello@escapealbania.al</p>
+                    </address>
+                </div>
+                <div class="footer__col">
+                    <h4 class="footer__title">Follow Us</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>&copy; 2025 Escape Albania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script>
+        // ========== EMAILJS CONFIG ==========
+        const EMAILJS_USER_ID = 'oQ-lCFRsASyzA0Yyo';
+        const EMAILJS_SERVICE_ID = 'service_b1sdva8';
+        const EMAILJS_TEMPLATE_ID = 'template_3qiaf5k';
+
+        emailjs.init(EMAILJS_USER_ID);
+
+        // ========== CAROUSEL ==========
+        let currentSlide = 0;
+        const track = document.getElementById('carouselTrack');
+        const slides = document.querySelectorAll('.carousel-slide');
+        const dotsContainer = document.getElementById('carouselDots');
+        const totalSlides = slides.length;
+
+        function createDots() {
+            for (let i = 0; i < totalSlides; i++) {
+                const dot = document.createElement('span');
+                dot.classList.add('dot');
+                dot.addEventListener('click', () => goToSlide(i));
+                dotsContainer.appendChild(dot);
+            }
+            updateDotsAndCaptions();
+        }
+
+        function updateDotsAndCaptions() {
+            document.querySelectorAll('.dot').forEach((dot, index) => {
+                dot.classList.toggle('active', index === currentSlide);
+            });
+            slides.forEach((slide, index) => {
+                if (index === currentSlide) {
+                    slide.classList.add('active-caption');
+                } else {
+                    slide.classList.remove('active-caption');
+                }
+            });
+        }
+
+        function goToSlide(index) {
+            currentSlide = index;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        function moveSlide(direction) {
+            currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+            track.style.transform = `translateX(-${currentSlide * 100}%)`;
+            updateDotsAndCaptions();
+        }
+
+        createDots();
+        window.moveSlide = moveSlide;
+
+        // ========== TOGGLE DAYS ==========
+        window.toggleDay = function (dayId) {
+            const card = document.getElementById(dayId);
+            card.classList.toggle('active');
+            const icon = card.querySelector('.toggle-icon i');
+            if (icon.classList.contains('fa-chevron-down')) {
+                icon.classList.remove('fa-chevron-down');
+                icon.classList.add('fa-chevron-up');
+            } else {
+                icon.classList.remove('fa-chevron-up');
+                icon.classList.add('fa-chevron-down');
+            }
+        };
+
+        // ========== TOGGLE INCLUSION ==========
+        window.showInclusion = function (type) {
+            document.getElementById('includedContent').classList.remove('active');
+            document.getElementById('excludedContent').classList.remove('active');
+            document.getElementById('showIncluded').classList.remove('active');
+            document.getElementById('showExcluded').classList.remove('active');
+            if (type === 'included') {
+                document.getElementById('includedContent').classList.add('active');
+                document.getElementById('showIncluded').classList.add('active');
+            } else {
+                document.getElementById('excludedContent').classList.add('active');
+                document.getElementById('showExcluded').classList.add('active');
+            }
+        };
+
+        // ========== FONCTION POUR LES DATES ==========
+        function updateReturnDate() {
+            const startDate = document.getElementById('startDate').value;
+            const endDateInput = document.getElementById('endDate');
+            if (startDate) {
+                const start = new Date(startDate);
+                const returnDate = new Date(start);
+                returnDate.setDate(start.getDate() + 8); // 8 jours
+                const year = returnDate.getFullYear();
+                const month = String(returnDate.getMonth() + 1).padStart(2, '0');
+                const day = String(returnDate.getDate()).padStart(2, '0');
+                endDateInput.value = `${year}-${month}-${day}`;
+            }
+        }
+
+        // ========== ENVOI EMAILJS ==========
+        document.getElementById('sendButton').addEventListener('click', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('fullName').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const startDate = document.getElementById('startDate').value;
+            const endDate = document.getElementById('endDate').value;
+            const travelers = document.getElementById('travelers').value;
+            const specialRequests = document.getElementById('requests').value.trim() || '—';
+
+            if (!name || !email || !phone || !startDate) {
+                alert('Veuillez remplir tous les champs obligatoires.');
+                return;
+            }
+
+            try {
+                await emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
+                    to_email: 'booking@escapealbania.al',
+                    from_name: name,
+                    from_email: email,
+                    phone: phone,
+                    start_date: startDate,
+                    end_date: endDate,
+                    travelers: travelers,
+                    tour_name: '8 jours au pays des aigles (Tirana, Apollonia, Berat, Himara, Gjirokaster)',
+                    price: 'Devis personnalisé',
+                    requests: specialRequests,
+                    booking_date: new Date().toLocaleString('fr-FR')
+                });
+                alert('✅ Demande envoyée avec succès ! Nous vous répondrons sous 24h.');
+                document.getElementById('bookingForm').reset();
+                const today = new Date().toISOString().split('T')[0];
+                document.getElementById('startDate').value = today;
+                updateReturnDate();
+            } catch (error) {
+                console.error('EmailJS error:', error);
+                alert('❌ Erreur lors de l\'envoi. Veuillez réessayer.');
+            }
+        });
+
+        // ========== HAMBURGER MENU ==========
+        const hamburger = document.getElementById('hamburger');
+        if (hamburger) {
+            hamburger.addEventListener('click', function () {
+                document.getElementById('navMenu').classList.toggle('active');
+            });
+        }
+
+        // Initialisation des dates
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('startDate').value = today;
+        updateReturnDate();
+    </script>
+</body>
+
+</html>

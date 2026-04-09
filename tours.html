@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tous nos circuits | Escape Albania</title>
+  <link rel="icon" type="image/x-icon" href="assets/icons/logo.png">
+  <meta name="description" content="Découvrez tous les circuits Escape Albania : Alpes albanaises, riviera, trésors UNESCO, et itinéraires sur mesure.">
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <!-- CSS kryesore per navbar dhe footer -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- CSS specifike per faqen e tours -->
+  <link rel="stylesheet" href="css/tours.css">
+</head>
+<body>
+  <!-- NAVBAR (identike me faqen kryesore) -->
+  <header class="navbar js-navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+        <img src="assets/icons/logo.png" alt="Logo Escape Albania" class="navbar__logo-img">
+        <a href="index.html" class="navbar__name">Escape Albania</a>
+      </div>
+
+      <!-- Hamburger (mobile) -->
+      <button class="navbar__hamburger js-hamburger" aria-label="Menu" aria-expanded="false">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+
+      <!-- Collapsible menu -->
+      <div class="navbar__collapse js-nav-collapse">
+        <nav class="navbar__center" aria-label="Navigation principale">
+          <ul class="navbar__menu">
+            <li><a href="index.html" class="navbar__link">Accueil</a></li>
+            <li><a href="tours.html" class="navbar__link active">Circuits</a></li>
+            <li><a href="index.html#about" class="navbar__link">À propos</a></li>
+            <li><a href="index.html#contact" class="navbar__link">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__right">
+          <div class="navbar__lang">
+            <span class="lang-switcher__item active">FR</span>
+            <span class="lang-switcher__item">EN</span>
+            <span class="lang-switcher__item">NL</span>
+            <span class="lang-switcher__item">DE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Page Header - Hero i vogel per faqen e tours -->
+    <div class="page-header">
+      <div class="container">
+        <h1>Nos circuits en Albanie</h1>
+        <p>Explorez une sélection d'itinéraires authentiques, conçus avec nos guides locaux pour une expérience inoubliable.</p>
+      </div>
+    </div>
+
+    <!-- Tours Grid - Te gjitha circuitet -->
+    <section class="tours-section">
+      <div class="container">
+        <div class="tours-grid">
+          
+          <!-- Circuit 1 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card1.jpg" alt="Alpes albanaises" loading="lazy">
+              <div class="tour-card__badge">Populaire</div>
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">15 jours au pays des Aigles</h2>
+              <p class="tour-card__desc">Trek inoubliable au cœur des Alpes albanaises, nuits en refuges, baignades dans des lacs d'altitude et rencontres avec les communautés montagnardes.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-umbrella-beach"></i> Plage</span>
+                <span><i class="fas fa-mountain"></i> Alpes</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 15 jours / 14 nuits</span>
+                <span class="tour-card__price">À partir de 200€</span>
+              </div>
+              <a href="tours-details/15jour.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 2 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card2.jpg" alt="Riviera albanaise" loading="lazy">
+              <div class="tour-card__badge">Coup de cœur</div>
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">Aventure dans les Alpes Albanaises</h2>
+              <p class="tour-card__desc">Explorez des paysages sauvages, des villages hors du temps et vivez une immersion authentique au cœur des montagnes albanaises.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-hiking"></i> Randonnée</span>
+                <span><i class="fas fa-mountain"></i> Montagnes</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 4 jours / 3 nuits</span>
+                <span class="tour-card__price">À partir de 500€</span>
+              </div>
+              <a href="/tours-details/4jour.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 3 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card3.webp" alt="Berat UNESCO" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">Voyage au cœur de l’Albanie authentique</h2>
+              <p class="tour-card__desc">Entre villes classées à l’UNESCO, Riviera aux eaux cristallines et
+                    expériences locales, découvrez en 8 jours une Albanie préservée, riche en culture et en
+                    émotions.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-landmark"></i> Culture</span>
+                <span><i class="fas fa-archway"></i> Histoire</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 8 jours / 7 nuits</span>
+                <span class="tour-card__price">À partir de 750€</span>
+              </div>
+              <a href="/tours-details/8jour.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 4 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="https://albaniaturism.com/wp-content/uploads/2025/08/Albania-Cycling-Tours-1.webp" alt="Theth et Valbona" loading="lazy">
+              <div class="tour-card__badge">Aventure</div>
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">Découvrir en vélo le pays des aigles</h2>
+              <p class="tour-card__desc">Aventure dans le parc national de Theth, passage par le col de Valbona, cascades de Grunas et hospitalité des familles albanaises.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-bicycle"></i> Vélo</span>
+                <span><i class="fas fa-water"></i> Cascades</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 10 jours / 9 nuits</span>
+                <span class="tour-card__price">À partir de 0€</span>
+              </div>
+              <a href="/tours-details/10jour-velo.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 5 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/albania-header.jpg" alt="Butrint" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">8 Jours au pays des aigles</h2>
+              <p class="tour-card__desc">Site archéologique de Butrint, lagune de Ksamil, baignades et découverte de la région de Sarandë, entre histoire et farniente.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-landmark"></i> Archéologie</span>
+                <span><i class="fas fa-umbrella-beach"></i> Détente</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 8 jours / 7 nuits</span>
+                <span class="tour-card__price">À partir de 0€</span>
+              </div>
+              <a href="/tours-details/8jours-aigles.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 6 -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="https://images.unsplash.com/photo-1614095282369-38e7ae9a9077?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Tirana" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">6 Jours au cœur de l'Albanie sauvage</h2>
+              <p class="tour-card__desc">De Gjirokastër, joyau UNESCO, aux plages paradisiaques de Ksamil – 6 jours en Albanie authentique. Dégustation de vin, atelier cuisine, balade à cheval, visite de Butrint et excursion en bateau aux îlots de Ksamil. Road-trip en voiture et hébergements de charme .</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-city"></i> Urbain</span>
+                <span><i class="fas fa-museum"></i> Musée</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 6 jours / 5 nuits <strong>(12-17 Août)</strong></span>
+                <span class="tour-card__price">À partir de 0€</span>
+              </div>
+              <a href="/tours-details/6jours-savuage.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+
+          <!-- Circuit 7  -->
+          <article class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card3.webp" alt="Gastronomie albanaise" loading="lazy">
+              <div class="tour-card__badge">Nouveau</div>
+            </div>
+            <div class="tour-card__content">
+              <h2 class="tour-card__title">Circuit sur mesure</h2>
+              <p class="tour-card__desc">Circuit œnogastronomique : vignobles de Berat, huiles d'olive, rakia artisanale et ateliers de cuisine avec des mamies albanaises.</p>
+              <div class="tour-card__features">
+                <span><i class="fas fa-wine-glass-alt"></i> Vin</span>
+                <span><i class="fas fa-utensils"></i> Cuisine</span>
+              </div>
+              <div class="tour-card__meta">
+                <span class="tour-card__duration"><i class="far fa-calendar-alt"></i> 7 jours / 6 nuits</span>
+                <span class="tour-card__price">À partir de 150€</span>
+              </div>
+              <a href="/tours-details/13jours.html" class="tour-card__btn">
+                Voir itinéraire <i class="fas fa-arrow-right"></i>
+              </a>
+            </div>
+          </article>
+      </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+      <div class="container">
+        <h2>Vous ne trouvez pas votre bonheur ?</h2>
+        <p>Tous nos itinéraires sont personnalisables. Parlez-nous de vos envies et nous créerons le voyage parfait pour vous.</p>
+        <div class="cta-buttons">
+          <a href="#" class="btn btn--outline-dark">Personnaliser mon voyage</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand">
+            <i class="fas fa-mountain"></i> Escape Albania
+          </div>
+          <p class="footer__desc">Voyages premium et authentiques en Albanie, conçus avec passion par des experts locaux.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Liens rapides</h4>
+          <ul class="footer__links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="tours.html">Circuits</a></li>
+            <li><a href="index.html#about">À propos</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Contact</h4>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Tirana, Albanie</p>
+            <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+            <p><i class="fas fa-envelope"></i> hello@Escape Albania.al</p>
+          </address>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title">Suivez-nous</h4>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p>&copy; 2025 Escape Albania. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    // Filter functionality
+    document.querySelectorAll('.filter-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+        this.classList.add('active');
+        
+        
+      });
+    });
+  </script>
+</body>
+</html>

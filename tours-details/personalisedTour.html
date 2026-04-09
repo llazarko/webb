@@ -1,0 +1,911 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Créez Votre Voyage Sur Mesure | Escape Albania</title>
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- EmailJS SDK -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        :root {
+            --primary: #1f4d3a;
+            --primary-light: #2e6b51;
+            --accent: #e6c8a0;
+            --text-dark: #1e1e1e;
+            --text-light: #ffffff;
+            --bg-light: #f8f9fa;
+            --gray-border: #e9ecef;
+            --shadow-sm: 0 4px 12px rgba(0,0,0,0.05);
+            --shadow-hover: 0 10px 30px rgba(0,0,0,0.1);
+            --font-sans: 'Inter', sans-serif;
+            --font-serif: 'Playfair Display', serif;
+        }
+        body {
+            font-family: var(--font-sans);
+            color: var(--text-dark);
+            line-height: 1.5;
+            background-color: #fff;
+        }
+        .container {
+            max-width: 1280px;
+            margin: 0 auto;
+            padding: 0 30px;
+        }
+        /* ----- UTILITIES ----- */
+        .btn {
+            display: inline-block;
+            padding: 12px 32px;
+            border-radius: 40px;
+            font-weight: 600;
+            text-decoration: none;
+            transition: all 0.2s;
+            border: 2px solid transparent;
+            cursor: pointer;
+            font-size: 1rem;
+            text-align: center;
+        }
+        .btn-primary {
+            background-color: var(--primary);
+            color: white;
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-light);
+            transform: translateY(-2px);
+            box-shadow: var(--shadow-hover);
+        }
+        .btn-outline {
+            border-color: var(--primary);
+            color: var(--primary);
+            background: transparent;
+        }
+        .btn-outline:hover {
+            background: var(--primary);
+            color: white;
+        }
+
+        /* ----- NAVBAR ----- */
+        .navbar {
+            position: sticky;
+            top: 0;
+            background: white;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
+            z-index: 1000;
+            padding: 12px 0;
+        }
+        .navbar .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--primary);
+            text-decoration: none;
+        }
+        .nav-menu {
+            display: flex;
+            gap: 30px;
+            list-style: none;
+        }
+        .nav-menu a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+        .nav-menu a:hover {
+            color: var(--primary);
+        }
+        .nav-right {
+            display: flex;
+            gap: 20px;
+            align-items: center;
+        }
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+        }
+        .hamburger span {
+            width: 25px;
+            height: 3px;
+            background: var(--primary);
+            border-radius: 3px;
+            transition: 0.2s;
+        }
+
+        /* ----- FORM CONTAINER ----- */
+        .form-page {
+            padding: 60px 0;
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+        }
+        .form-container {
+            background: white;
+            border-radius: 40px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        /* Progress Steps */
+        .progress-steps {
+            display: flex;
+            background: var(--bg-light);
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--gray-border);
+        }
+        .step {
+            flex: 1;
+            text-align: center;
+            position: relative;
+        }
+        .step-number {
+            width: 45px;
+            height: 45px;
+            background: #e0e0e0;
+            color: #666;
+            border-radius: 50%;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin-bottom: 10px;
+            transition: all 0.3s;
+        }
+        .step.active .step-number {
+            background: var(--primary);
+            color: white;
+        }
+        .step.completed .step-number {
+            background: var(--primary-light);
+            color: white;
+        }
+        .step-title {
+            font-size: 0.9rem;
+            color: #666;
+            font-weight: 500;
+        }
+        .step.active .step-title {
+            color: var(--primary);
+            font-weight: bold;
+        }
+
+        /* Form Sections */
+        .form-section {
+            display: none;
+            padding: 40px;
+            animation: fadeIn 0.5s ease;
+        }
+        .form-section.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .section-title {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+        .section-subtitle {
+            color: #666;
+            margin-bottom: 30px;
+            border-left: 3px solid var(--primary);
+            padding-left: 15px;
+        }
+        .form-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 25px;
+        }
+        .form-group {
+            margin-bottom: 5px;
+        }
+        .form-group.full-width {
+            grid-column: span 2;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 600;
+            color: #555;
+        }
+        label .required {
+            color: #dc3545;
+        }
+        input, select, textarea {
+            width: 100%;
+            padding: 12px 15px;
+            border: 2px solid var(--gray-border);
+            border-radius: 12px;
+            font-family: inherit;
+            font-size: 1rem;
+            transition: border-color 0.3s;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: var(--primary);
+        }
+        .checkbox-group, .radio-group {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 12px;
+            margin-top: 10px;
+        }
+        .checkbox-item, .radio-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .checkbox-item input, .radio-item input {
+            width: auto;
+            width: 18px;
+            height: 18px;
+        }
+        .checkbox-item label, .radio-item label {
+            margin-bottom: 0;
+            font-weight: 400;
+            cursor: pointer;
+        }
+        .button-group {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 40px;
+            gap: 15px;
+        }
+        .btn-prev, .btn-next, .btn-submit {
+            padding: 14px 35px;
+            border: none;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        .btn-prev {
+            background: #e0e0e0;
+            color: #666;
+        }
+        .btn-prev:hover {
+            background: #ccc;
+        }
+        .btn-next, .btn-submit {
+            background: var(--primary);
+            color: white;
+        }
+        .btn-next:hover, .btn-submit:hover {
+            background: var(--primary-light);
+            transform: translateY(-2px);
+        }
+        .btn-submit {
+            background: var(--primary);
+        }
+        /* Summary Section */
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+            background: var(--bg-light);
+            padding: 30px;
+            border-radius: 20px;
+            margin-bottom: 30px;
+            max-height: 500px;
+            overflow-y: auto;
+        }
+        .summary-item {
+            padding: 12px;
+            background: white;
+            border-radius: 12px;
+            border-left: 3px solid var(--primary);
+        }
+        .summary-label {
+            font-weight: 700;
+            color: var(--primary);
+            font-size: 0.85rem;
+            margin-bottom: 5px;
+        }
+        .summary-value {
+            color: #333;
+            font-size: 0.95rem;
+            word-break: break-word;
+        }
+        /* Success Message */
+        .success-message {
+            text-align: center;
+            padding: 60px 40px;
+            display: none;
+        }
+        .success-message i {
+            font-size: 80px;
+            color: #28a745;
+            margin-bottom: 20px;
+        }
+        .success-message h2 {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-family: var(--font-serif);
+        }
+        /* Footer */
+        .footer {
+            background: #0e2b20;
+            color: #ddd;
+            padding: 60px 0 30px;
+        }
+        .footer__grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+        .footer__brand {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            color: white;
+            margin-bottom: 1rem;
+        }
+        .footer__desc {
+            line-height: 1.6;
+            max-width: 280px;
+        }
+        .footer__title {
+            color: white;
+            font-size: 1.2rem;
+            margin-bottom: 1.2rem;
+            font-weight: 600;
+        }
+        .footer__links {
+            list-style: none;
+        }
+        .footer__links li {
+            margin-bottom: 0.7rem;
+        }
+        .footer__links a {
+            color: #ddd;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        .footer__links a:hover {
+            color: var(--accent);
+        }
+        .footer__social {
+            display: flex;
+            gap: 18px;
+            font-size: 1.5rem;
+        }
+        .footer__social a {
+            color: #ddd;
+            transition: 0.2s;
+        }
+        .footer__social a:hover {
+            color: var(--accent);
+            transform: translateY(-3px);
+        }
+        .footer__bottom {
+            border-top: 1px solid #2d4a3c;
+            padding-top: 30px;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+        @media (max-width: 900px) {
+            .nav-menu, .nav-right {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                align-items: center;
+                gap: 15px;
+                padding: 20px 0;
+            }
+            .nav-menu.active, .nav-right.active {
+                display: flex;
+            }
+            .hamburger {
+                display: flex;
+            }
+            .navbar .container {
+                justify-content: space-between;
+            }
+            .form-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-group.full-width {
+                grid-column: span 1;
+            }
+            .progress-steps {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .step {
+                display: flex;
+                align-items: center;
+                gap: 15px;
+            }
+            .step-number {
+                margin-bottom: 0;
+            }
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+            .form-section {
+                padding: 25px;
+            }
+            .footer__grid {
+                grid-template-columns: 1fr;
+            }
+        }
+        @media (max-width: 480px) {
+            .container {
+                padding: 0 20px;
+            }
+            .section-title {
+                font-size: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="/assets/icons/logo.png" class="logo">Escape Albania</a>
+            <button class="hamburger" id="hamburger">
+                <span></span><span></span><span></span>
+            </button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="/index.html">Accueil</a></li>
+                <li><a href="/tours.html">Circuits</a></li>
+                <li><a href="/tours-details/personalisedTour.html" class="active">Sur mesure</a></li>
+                <li><a href="/contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- FORM PAGE -->
+    <div class="form-page">
+        <div class="container">
+            <div class="form-container">
+                <div class="progress-steps">
+                    <div class="step active" id="step1Indicator">
+                        <div class="step-number">1</div>
+                        <div class="step-title">Informations personnelles</div>
+                    </div>
+                    <div class="step" id="step2Indicator">
+                        <div class="step-number">2</div>
+                        <div class="step-title">Préférences de voyage</div>
+                    </div>
+                    <div class="step" id="step3Indicator">
+                        <div class="step-number">3</div>
+                        <div class="step-title">Centres d'intérêt</div>
+                    </div>
+                    <div class="step" id="step4Indicator">
+                        <div class="step-number">4</div>
+                        <div class="step-title">Confirmation</div>
+                    </div>
+                </div>
+
+                <form id="customTourForm">
+                    <!-- Section 1: Informations personnelles -->
+                    <div class="form-section active" id="section1">
+                        <h2 class="section-title">Informations personnelles</h2>
+                        <p class="section-subtitle">Parlez-nous un peu de vous</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Nom et Prénom <span class="required">*</span></label>
+                                <input type="text" id="fullName" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Email <span class="required">*</span></label>
+                                <input type="email" id="email" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Téléphone <span class="required">*</span></label>
+                                <input type="tel" id="phone" placeholder="+355 68 123 4567" required>
+                            </div>
+                            <div class="form-group">
+                                <label>Pays d'origine</label>
+                                <input type="text" id="country" placeholder="ex. France, Belgique">
+                            </div>
+                            <div class="form-group">
+                                <label>Nombre de personnes <span class="required">*</span></label>
+                                <select id="travelers" required>
+                                    <option value="1">1 personne</option>
+                                    <option value="2" selected>2 personnes</option>
+                                    <option value="3">3 personnes</option>
+                                    <option value="4">4 personnes</option>
+                                    <option value="5">5 personnes</option>
+                                    <option value="6+">6+ personnes</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Âges des voyageurs</label>
+                                <input type="text" id="ages" placeholder="ex. 35, 32, 8 ans">
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-next" onclick="nextSection(1)">Suivant <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Section 2: Préférences de voyage -->
+                    <div class="form-section" id="section2">
+                        <h2 class="section-title">Préférences de voyage</h2>
+                        <p class="section-subtitle">Comment imaginez-vous votre voyage idéal ?</p>
+                        <div class="form-grid">
+                            <div class="form-group">
+                                <label>Durée souhaitée <span class="required">*</span></label>
+                                <select id="duration" required>
+                                    <option value="">Choisissez...</option>
+                                    <option value="3-5 jours">3-5 jours</option>
+                                    <option value="6-8 jours">6-8 jours</option>
+                                    <option value="9-12 jours">9-12 jours</option>
+                                    <option value="13-15 jours">13-15 jours</option>
+                                    <option value="15+ jours">Plus de 15 jours</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Date de début souhaitée</label>
+                                <input type="date" id="startDate">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Pays que vous souhaitez visiter <span class="required">*</span></label>
+                                <div class="checkbox-group" id="countriesCheckbox">
+                                    <div class="checkbox-item"><input type="checkbox" value="Albanie"> <label>Albanie</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Kosovo"> <label>Kosovo</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Monténégro"> <label>Monténégro</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Macédoine du Nord"> <label>Macédoine du Nord</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Grèce"> <label>Grèce</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Croatie"> <label>Croatie</label></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ville de départ</label>
+                                <input type="text" id="pickupCity" placeholder="ex. Tirana">
+                            </div>
+                            <div class="form-group">
+                                <label>Ville d'arrivée</label>
+                                <input type="text" id="dropoffCity" placeholder="ex. Saranda">
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Services souhaités</label>
+                                <div class="checkbox-group" id="servicesCheckbox">
+                                    <div class="checkbox-item"><input type="checkbox" value="Création d'itinéraire"> <label>Création d'itinéraire</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Réservation d'hébergement"> <label>Réservation d'hébergement</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Guide et chauffeur privé"> <label>Guide et chauffeur privé</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Réservation d'activités"> <label>Réservation d'activités</label></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-prev" onclick="prevSection(2)"><i class="fas fa-arrow-left"></i> Retour</button>
+                            <button type="button" class="btn-next" onclick="nextSection(2)">Suivant <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Section 3: Centres d'intérêt -->
+                    <div class="form-section" id="section3">
+                        <h2 class="section-title">Centres d'intérêt</h2>
+                        <p class="section-subtitle">Dites-nous ce que vous aimez vivre</p>
+                        <div class="form-grid">
+                            <div class="form-group full-width">
+                                <label>Qu'aimeriez-vous découvrir ?</label>
+                                <div class="checkbox-group" id="experiencesCheckbox">
+                                    <div class="checkbox-item"><input type="checkbox" value="Gastronomie locale"> <label>Gastronomie locale</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Nature et aventure"> <label>Nature et aventure</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Plages"> <label>Plages</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Culture et histoire"> <label>Culture et histoire</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Vie nocturne"> <label>Vie nocturne</label></div>
+                                    <div class="checkbox-item"><input type="checkbox" value="Photographie"> <label>Photographie</label></div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Avec qui voyagez-vous ?</label>
+                                <select id="travelWith">
+                                    <option value="">Choisissez...</option>
+                                    <option value="En couple">En couple</option>
+                                    <option value="En famille avec enfants">En famille avec enfants</option>
+                                    <option value="Entre amis">Entre amis</option>
+                                    <option value="Seul(e)">Seul(e)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Rythme préféré</label>
+                                <select id="pace">
+                                    <option value="">Choisissez...</option>
+                                    <option value="Relaxé">Relaxé (beaucoup de temps libre)</option>
+                                    <option value="Équilibré">Équilibré (activités et repos)</option>
+                                    <option value="Actif">Actif (beaucoup d'activités chaque jour)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Type d'hébergement</label>
+                                <select id="accommodation">
+                                    <option value="">Choisissez...</option>
+                                    <option value="Hôtels de luxe">Hôtels de luxe (5 étoiles)</option>
+                                    <option value="Hôtels 4 étoiles">Hôtels 4 étoiles</option>
+                                    <option value="Maisons d'hôtes traditionnelles">Maisons d'hôtes traditionnelles</option>
+                                    <option value="Appartements">Appartements</option>
+                                </select>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Ce qui ne doit pas manquer dans votre voyage</label>
+                                <textarea id="mustHave" rows="2" placeholder="ex. Expériences locales, guide hispanophone, cuisine traditionnelle..."></textarea>
+                            </div>
+                            <div class="form-group full-width">
+                                <label>Demandes particulières</label>
+                                <textarea id="specialRequests" rows="2" placeholder="Allergies alimentaires, besoins spécifiques..."></textarea>
+                            </div>
+                        </div>
+                        <div class="button-group">
+                            <button type="button" class="btn-prev" onclick="prevSection(3)"><i class="fas fa-arrow-left"></i> Retour</button>
+                            <button type="button" class="btn-next" onclick="nextSection(3)">Voir le récapitulatif <i class="fas fa-arrow-right"></i></button>
+                        </div>
+                    </div>
+
+                    <!-- Section 4: Résumé et envoi -->
+                    <div class="form-section" id="section4">
+                        <h2 class="section-title">Récapitulatif de votre demande</h2>
+                        <p class="section-subtitle">Vérifiez vos informations avant de les envoyer</p>
+                        <div class="summary-grid" id="summaryContainer"></div>
+                        <div class="button-group">
+                            <button type="button" class="btn-prev" onclick="prevSection(4)"><i class="fas fa-arrow-left"></i> Modifier</button>
+                            <button type="button" class="btn-submit" id="submitBtn">
+                                <i class="fas fa-paper-plane"></i> Envoyer la demande
+                            </button>
+                        </div>
+                    </div>
+                </form>
+
+                <div class="success-message" id="successMessage">
+                    <i class="fas fa-check-circle"></i>
+                    <h2>Demande envoyée avec succès !</h2>
+                    <p>Merci de nous avoir contactés ! Nous examinerons votre demande et vous répondrons dans les 24 heures avec un itinéraire personnalisé.</p>
+                    <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 20px;">Créer une autre demande</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__grid">
+                <div>
+                    <div class="footer__brand">Guía Español en Albania</div>
+                    <p class="footer__desc">Circuits authentiques en Albanie et dans les Balkans. Des experts locaux pour des expériences inoubliables.</p>
+                </div>
+                <div>
+                    <h4 class="footer__title">Liens rapides</h4>
+                    <ul class="footer__links">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="tours.html">Circuits</a></li>
+                        <li><a href="tailor-made.html">Sur mesure</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">Contact</h4>
+                    <ul class="footer__links">
+                        <li><i class="fas fa-phone"></i> +355 69 123 4567</li>
+                        <li><i class="fas fa-envelope"></i> info@guiaespanolalbania.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Tirana, Albanie</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="footer__title">Suivez-nous</h4>
+                    <div class="footer__social">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer__bottom">
+                <p>© 2024 Guía Español en Albania. Tous droits réservés.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Initialize EmailJS - REPLACE WITH YOUR CREDENTIALS
+        emailjs.init("oQ-lCFRsASyzA0Yyo");
+
+        let currentSection = 1;
+
+        function nextSection(current) {
+            if (validateSection(current)) {
+                document.getElementById(`section${current}`).classList.remove('active');
+                document.getElementById(`section${current + 1}`).classList.add('active');
+                
+                document.getElementById(`step${current}Indicator`).classList.remove('active');
+                document.getElementById(`step${current}Indicator`).classList.add('completed');
+                document.getElementById(`step${current + 1}Indicator`).classList.add('active');
+                
+                currentSection = current + 1;
+                
+                if (currentSection === 4) {
+                    updateSummary();
+                }
+            }
+        }
+
+        function prevSection(current) {
+            document.getElementById(`section${current}`).classList.remove('active');
+            document.getElementById(`section${current - 1}`).classList.add('active');
+            
+            document.getElementById(`step${current}Indicator`).classList.remove('active');
+            if (current === 4) {
+                document.getElementById(`step${current - 1}Indicator`).classList.remove('completed');
+            }
+            document.getElementById(`step${current - 1}Indicator`).classList.add('active');
+            
+            currentSection = current - 1;
+        }
+
+        function validateSection(section) {
+            if (section === 1) {
+                const name = document.getElementById('fullName').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const phone = document.getElementById('phone').value.trim();
+                
+                if (!name) { alert('Veuillez entrer votre nom.'); return false; }
+                if (!email) { alert('Veuillez entrer votre email.'); return false; }
+                if (!email.includes('@')) { alert('Veuillez entrer un email valide.'); return false; }
+                if (!phone) { alert('Veuillez entrer votre numéro de téléphone.'); return false; }
+            }
+            else if (section === 2) {
+                const duration = document.getElementById('duration').value;
+                if (!duration) { alert('Veuillez choisir la durée de votre voyage.'); return false; }
+            }
+            return true;
+        }
+
+        function getSelectedCheckboxValues(containerId) {
+            const container = document.getElementById(containerId);
+            if (!container) return '';
+            const checkboxes = container.querySelectorAll('input[type="checkbox"]:checked');
+            const values = Array.from(checkboxes).map(cb => cb.value);
+            return values.length ? values.join(', ') : '';
+        }
+
+        function updateSummary() {
+            const summaryContainer = document.getElementById('summaryContainer');
+            const formData = {
+                'Nom complet': document.getElementById('fullName')?.value || '-',
+                'Email': document.getElementById('email')?.value || '-',
+                'Téléphone': document.getElementById('phone')?.value || '-',
+                'Pays d\'origine': document.getElementById('country')?.value || '-',
+                'Nombre de personnes': document.getElementById('travelers')?.value || '-',
+                'Âges': document.getElementById('ages')?.value || '-',
+                'Durée': document.getElementById('duration')?.value || '-',
+                'Date de début': document.getElementById('startDate')?.value || 'Non spécifiée',
+                'Pays à visiter': getSelectedCheckboxValues('countriesCheckbox') || '-',
+                'Services': getSelectedCheckboxValues('servicesCheckbox') || '-',
+                'Expériences souhaitées': getSelectedCheckboxValues('experiencesCheckbox') || '-',
+                'Voyage avec': document.getElementById('travelWith')?.value || '-',
+                'Rythme': document.getElementById('pace')?.value || '-',
+                'Hébergement': document.getElementById('accommodation')?.value || '-',
+                'Incontournable': document.getElementById('mustHave')?.value || '-',
+                'Demandes particulières': document.getElementById('specialRequests')?.value || '-'
+            };
+            
+            let html = '';
+            for (const [key, value] of Object.entries(formData)) {
+                if (value && value !== '-') {
+                    html += `
+                        <div class="summary-item">
+                            <div class="summary-label">${key}</div>
+                            <div class="summary-value">${value}</div>
+                        </div>
+                    `;
+                }
+            }
+            summaryContainer.innerHTML = html;
+        }
+
+        function getAllFormData() {
+            return {
+                fullName: document.getElementById('fullName')?.value || '',
+                email: document.getElementById('email')?.value || '',
+                phone: document.getElementById('phone')?.value || '',
+                country: document.getElementById('country')?.value || '',
+                travelers: document.getElementById('travelers')?.value || '',
+                ages: document.getElementById('ages')?.value || '',
+                duration: document.getElementById('duration')?.value || '',
+                startDate: document.getElementById('startDate')?.value || '',
+                countries: getSelectedCheckboxValues('countriesCheckbox') || '',
+                services: getSelectedCheckboxValues('servicesCheckbox') || '',
+                experiences: getSelectedCheckboxValues('experiencesCheckbox') || '',
+                travelWith: document.getElementById('travelWith')?.value || '',
+                pace: document.getElementById('pace')?.value || '',
+                accommodation: document.getElementById('accommodation')?.value || '',
+                mustHave: document.getElementById('mustHave')?.value || '',
+                specialRequests: document.getElementById('specialRequests')?.value || ''
+            };
+        }
+
+        document.getElementById('submitBtn').addEventListener('click', function() {
+            const formData = getAllFormData();
+            
+            if (!formData.email || !formData.email.includes('@')) {
+                alert('Veuillez entrer un email valide.');
+                return;
+            }
+            
+            const btn = this;
+            const originalText = btn.innerHTML;
+            btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Envoi en cours...';
+            btn.disabled = true;
+            
+            const templateParams = {
+                to_name: 'Tour Operator',
+                from_name: formData.fullName,
+                from_email: formData.email,
+                phone: formData.phone,
+                country: formData.country,
+                travelers: formData.travelers,
+                ages: formData.ages,
+                duration: formData.duration,
+                start_date: formData.startDate || 'Non spécifiée',
+                countries_to_visit: formData.countries,
+                services: formData.services,
+                experiences: formData.experiences,
+                travel_with: formData.travelWith,
+                pace: formData.pace,
+                accommodation: formData.accommodation,
+                must_have: formData.mustHave,
+                special_requests: formData.specialRequests
+            };
+            
+            // REPLACE WITH YOUR EMAILJS CREDENTIALS
+            const serviceId = 'escape_albania2024';
+            const templateId = 'template_cprrzzs';
+            
+            emailjs.send(serviceId, templateId, templateParams)
+                .then(function(response) {
+                    console.log('Email envoyé avec succès!', response);
+                    document.getElementById('customTourForm').style.display = 'none';
+                    document.getElementById('successMessage').style.display = 'block';
+                })
+                .catch(function(error) {
+                    console.error('Erreur:', error);
+                    alert('Erreur lors de l\'envoi. Veuillez réessayer.');
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                });
+        });
+
+        // Hamburger menu
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('navMenu');
+        const navRight = document.getElementById('navRight');
+        
+        if (hamburger) {
+            hamburger.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+                navRight.classList.toggle('active');
+                hamburger.classList.toggle('active');
+            });
+        }
+
+        // Set minimum date
+        window.onload = function() {
+            const today = new Date().toISOString().split('T')[0];
+            const startDate = document.getElementById('startDate');
+            if (startDate) startDate.min = today;
+        };
+    </script>
+</body>
+</html>
