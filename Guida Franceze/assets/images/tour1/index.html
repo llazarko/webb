@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Escape Albania – Découvrez l'Albanie autrement</title>
+  <meta name="description" content="Voyages authentiques en Albanie avec guides locaux – circuits premium, petits groupes, expériences uniques.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <style>
+    /* ── Reset & Base ── */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'Montserrat', sans-serif; color: #222; background: #fff; }
+
+    /* ── Navbar ── */
+    .navbar {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      padding: 1.2rem 2rem;
+      background: transparent;
+      transition: background 0.3s, box-shadow 0.3s;
+    }
+    .navbar.scrolled {
+      background: rgba(255,255,255,0.97);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+    }
+    .navbar__container {
+      max-width: 1200px; margin: 0 auto;
+      display: flex; align-items: center; justify-content: space-between;
+    }
+    .navbar__logo { display: flex; align-items: center; gap: .6rem; text-decoration: none; }
+    .navbar__logo-img { height: 36px; width: auto; }
+    .navbar__name {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.25rem; font-weight: 700;
+      color: #fff; text-decoration: none;
+      transition: color 0.3s;
+    }
+    .navbar.scrolled .navbar__name { color: #1a3a2a; }
+
+    .navbar__collapse { display: flex; align-items: center; gap: 2rem; }
+    .navbar__menu { list-style: none; display: flex; gap: 1.8rem; }
+    .navbar__link {
+      color: #fff; text-decoration: none;
+      font-size: .875rem; font-weight: 500; letter-spacing: .04em;
+      transition: opacity 0.2s;
+    }
+    .navbar__link:hover { opacity: .7; }
+    .navbar.scrolled .navbar__link { color: #1a3a2a; }
+
+    /* ── Language Switcher ── */
+    .navbar__lang { display: flex; gap: .3rem; }
+    .lang-switcher__item {
+      padding: .3rem .6rem; border-radius: 4px;
+      font-size: .75rem; font-weight: 600; letter-spacing: .06em;
+      cursor: pointer; color: rgba(255,255,255,0.7);
+      transition: all 0.2s;
+      user-select: none;
+    }
+    .lang-switcher__item:hover { color: #fff; }
+    .lang-switcher__item.active {
+      background: rgba(255,255,255,0.25);
+      color: #fff;
+    }
+    .navbar.scrolled .lang-switcher__item { color: rgba(26,58,42,0.55); }
+    .navbar.scrolled .lang-switcher__item:hover { color: #1a3a2a; }
+    .navbar.scrolled .lang-switcher__item.active {
+      background: rgba(26,58,42,0.12);
+      color: #1a3a2a;
+    }
+
+    /* ── Hamburger ── */
+    .navbar__hamburger {
+      display: none; flex-direction: column; gap: 5px;
+      background: none; border: none; cursor: pointer; padding: 4px;
+    }
+    .navbar__hamburger-line {
+      display: block; width: 24px; height: 2px;
+      background: #fff; border-radius: 2px; transition: background 0.3s;
+    }
+    .navbar.scrolled .navbar__hamburger-line { background: #1a3a2a; }
+
+    /* ── Hero ── */
+    .hero {
+      position: relative; height: 100vh; min-height: 600px;
+      display: flex; align-items: center; justify-content: center;
+      overflow: hidden;
+    }
+    .hero__background {
+      position: absolute; inset: 0;
+    }
+    .hero__background video,
+    .hero__background img.hero__fallback {
+      width: 100%; height: 100%; object-fit: cover;
+    }
+    .hero__overlay {
+      position: absolute; inset: 0;
+      background: linear-gradient(to bottom, rgba(0,0,0,.45) 0%, rgba(0,0,0,.2) 60%, rgba(0,0,0,.55) 100%);
+    }
+    .hero__content {
+      position: relative; z-index: 2; text-align: center;
+      padding: 0 1.5rem; max-width: 800px;
+    }
+    .hero__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.5rem, 6vw, 4.5rem);
+      color: #fff; font-weight: 700;
+      margin-bottom: 1.2rem; line-height: 1.1;
+      text-shadow: 0 2px 20px rgba(0,0,0,.3);
+    }
+    .hero__subtitle-pill {
+      display: inline-block;
+      background: rgba(255,255,255,0.18);
+      border: 1px solid rgba(255,255,255,0.35);
+      backdrop-filter: blur(6px);
+      border-radius: 50px; padding: .6rem 1.4rem;
+      color: #fff; font-size: 1rem; font-weight: 400;
+      margin-bottom: 2rem;
+    }
+    .hero__buttons { margin-bottom: 2.5rem; }
+    .hero__scroll {
+      display: inline-flex; flex-direction: column; align-items: center;
+      color: rgba(255,255,255,0.8); text-decoration: none; font-size: 1.1rem;
+      animation: bounce 2s infinite;
+    }
+    @keyframes bounce {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(8px); }
+    }
+
+    /* ── Buttons ── */
+    .btn {
+      display: inline-block; padding: .85rem 2rem;
+      border-radius: 4px; font-size: .9rem; font-weight: 600;
+      letter-spacing: .05em; text-decoration: none;
+      transition: all 0.25s; cursor: pointer; border: 2px solid transparent;
+    }
+    .btn--primary {
+      background: #2d6a4f; color: #fff; border-color: #2d6a4f;
+    }
+    .btn--primary:hover { background: #1b4332; border-color: #1b4332; }
+    .btn--outline-dark {
+      background: transparent; color: #1a3a2a; border-color: #1a3a2a;
+    }
+    .btn--outline-dark:hover { background: #1a3a2a; color: #fff; }
+    .btn--outline-light {
+      background: transparent; color: #fff; border-color: rgba(255,255,255,0.7);
+    }
+    .btn--outline-light:hover { background: rgba(255,255,255,0.15); }
+
+    /* ── Sections ── */
+    .section { padding: 5rem 1.5rem; }
+    .section--beige { background: #f8f5f0; }
+    .section--dark { background: #1a3a2a; color: #fff; }
+    .container { max-width: 1200px; margin: 0 auto; }
+    .section__title {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 700; margin-bottom: 3rem; text-align: center;
+    }
+    .section__title--light { color: #fff; }
+
+    /* ── Tours Grid ── */
+    .tours__grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2rem; margin-bottom: 2.5rem;
+    }
+    .tour-card {
+      background: #fff; border-radius: 12px;
+      overflow: hidden; box-shadow: 0 4px 20px rgba(0,0,0,.08);
+      transition: transform 0.25s, box-shadow 0.25s;
+    }
+    .tour-card:hover { transform: translateY(-4px); box-shadow: 0 8px 30px rgba(0,0,0,.13); }
+    .tour-card__image { height: 220px; overflow: hidden; }
+    .tour-card__image img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.4s; }
+    .tour-card:hover .tour-card__image img { transform: scale(1.05); }
+    .tour-card__content { padding: 1.5rem; }
+    .tour-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.2rem; font-weight: 700; margin-bottom: .5rem; color: #1a3a2a;
+    }
+    .tour-card__desc { font-size: .875rem; color: #555; margin-bottom: 1rem; }
+    .tour-card__meta {
+      display: flex; align-items: center; justify-content: space-between;
+      font-size: .8rem; color: #777;
+    }
+    .tour-card__link { color: #2d6a4f; font-weight: 600; text-decoration: none; transition: gap 0.2s; }
+    .tour-card__link:hover { color: #1b4332; }
+    .tours__cta { text-align: center; }
+
+    /* ── Features ── */
+    .features__grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2rem;
+    }
+    .feature-card { text-align: center; padding: 2rem 1rem; }
+    .feature-card__icon {
+      font-size: 2.2rem; color: #2d6a4f; margin-bottom: 1rem;
+    }
+    .feature-card__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem; font-weight: 700; margin-bottom: .5rem; color: #1a3a2a;
+    }
+    .feature-card__desc { font-size: .875rem; color: #555; }
+
+    /* ── Why Albania ── */
+    .why-albania__grid {
+      display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;
+    }
+    .why-albania__list { list-style: none; display: flex; flex-direction: column; gap: 1rem; }
+    .why-albania__list li { font-size: 1rem; color: rgba(255,255,255,0.9); line-height: 1.6; }
+    .why-albania__media { border-radius: 12px; overflow: hidden; }
+    .why-albania__media img { width: 100%; height: 400px; object-fit: cover; }
+
+    /* ── CTA ── */
+    .cta { text-align: center; }
+    .cta__subtitle { color: #555; margin-bottom: 2rem; font-size: 1rem; }
+    .cta__buttons { display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap; }
+
+    /* ── Footer ── */
+    .footer { background: #0d2318; color: rgba(255,255,255,0.75); padding: 4rem 1.5rem 2rem; }
+    .footer__grid {
+      display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 2.5rem; max-width: 1200px; margin: 0 auto 3rem;
+    }
+    .footer__brand {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem; color: #fff; margin-bottom: 1rem;
+    }
+    .footer__desc { font-size: .85rem; line-height: 1.7; }
+    .footer__title { color: #fff; font-size: .9rem; letter-spacing: .08em; text-transform: uppercase; margin-bottom: 1.2rem; }
+    .footer__links { list-style: none; display: flex; flex-direction: column; gap: .7rem; }
+    .footer__links a { color: rgba(255,255,255,0.65); text-decoration: none; font-size: .875rem; transition: color 0.2s; }
+    .footer__links a:hover { color: #fff; }
+    address { font-style: normal; display: flex; flex-direction: column; gap: .7rem; font-size: .875rem; }
+    address p i { margin-right: .5rem; color: #2d6a4f; }
+    .footer__social { display: flex; gap: 1rem; }
+    .footer__social a {
+      width: 36px; height: 36px; border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.2);
+      display: flex; align-items: center; justify-content: center;
+      color: rgba(255,255,255,0.65); font-size: .85rem; text-decoration: none;
+      transition: all 0.2s;
+    }
+    .footer__social a:hover { background: #2d6a4f; border-color: #2d6a4f; color: #fff; }
+    .footer__bottom {
+      text-align: center; padding-top: 2rem;
+      border-top: 1px solid rgba(255,255,255,0.1);
+      font-size: .8rem; color: rgba(255,255,255,0.4);
+      max-width: 1200px; margin: 0 auto;
+    }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .navbar__hamburger { display: flex; }
+      .navbar__collapse {
+        position: absolute; top: 100%; left: 0; right: 0;
+        background: rgba(255,255,255,0.97);
+        flex-direction: column; align-items: flex-start;
+        padding: 1.5rem 2rem; gap: 1.5rem;
+        display: none;
+        box-shadow: 0 8px 24px rgba(0,0,0,.12);
+      }
+      .navbar__collapse.open { display: flex; }
+      .navbar__menu { flex-direction: column; gap: 1rem; }
+      .navbar__link { color: #1a3a2a !important; }
+      .why-albania__grid { grid-template-columns: 1fr; }
+      .why-albania__media { order: -1; }
+    }
+
+    /* ── Translation fade ── */
+    [data-i18n] { transition: opacity 0.2s; }
+    .lang-transition { opacity: 0; }
+  </style>
+</head>
+<body>
+
+  <header class="navbar js-navbar">
+    <div class="navbar__container">
+      <div class="navbar__logo">
+        <a href="index.html" class="navbar__name">Escape Albania</a>
+      </div>
+
+      <button class="navbar__hamburger js-hamburger" aria-label="Menu" aria-expanded="false">
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+        <span class="navbar__hamburger-line"></span>
+      </button>
+
+      <div class="navbar__collapse js-nav-collapse">
+        <nav class="navbar__center" aria-label="Main navigation">
+          <ul class="navbar__menu">
+            <li><a href="#hero" class="navbar__link" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="tours.html" class="navbar__link" data-i18n="nav_tours">Circuits</a></li>
+            <li><a href="#about" class="navbar__link" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#contact" class="navbar__link" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </nav>
+
+        <div class="navbar__right">
+          <div class="navbar__lang">
+            <span class="lang-switcher__item active" data-lang="fr">FR</span>
+            <span class="lang-switcher__item" data-lang="en">EN</span>
+            <span class="lang-switcher__item" data-lang="nl">NL</span>
+            <span class="lang-switcher__item" data-lang="de">DE</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- HERO -->
+    <section id="hero" class="hero">
+      <div class="hero__background">
+        <video autoplay muted loop playsinline poster="assets/images/albania-header.jpg">
+          <source src="assets/videos/albania-hero.mp4" type="video/mp4">
+        </video>
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="hero__content">
+        <h1 class="hero__title" data-i18n="hero_title">Bienvenue en Albanie</h1>
+        <div class="hero__subtitle-pill">
+          <span data-i18n="hero_subtitle">Découvrez les trésors de l'Albanie grâce à nos circuits exclusifs.</span>
+        </div>
+        <div class="hero__buttons">
+          <a href="#tours" class="btn btn--primary" data-i18n="hero_cta">Explorer les circuits</a>
+        </div>
+        <a href="#features" class="hero__scroll">
+          <i class="fas fa-chevron-down" aria-hidden="true"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- TOURS -->
+    <section id="tours" class="tours section section--beige">
+      <div class="container">
+        <h2 class="section__title" data-i18n="tours_title">Découvrez l'Albanie avec nos experts</h2>
+        <div class="tours__grid">
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card1.jpg" alt="Albanian Alps" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title" data-i18n="tour1_title">15 jours au pays des Aigles</h3>
+              <p class="tour-card__desc" data-i18n="tour1_desc">Randonnées inoubliables et nuits chez l'habitant.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> <span data-i18n="tour1_days">15 jours</span></span>
+                <a href="#" class="tour-card__link"><span data-i18n="see_details">Voir les détails</span> <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card2.jpg" alt="Ionian Coast" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title" data-i18n="tour2_title">L'Albanie en 1 semaine</h3>
+              <p class="tour-card__desc" data-i18n="tour2_desc">Ksamil, Gjipe, et villages perchés.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> <span data-i18n="tour2_days">7 jours</span></span>
+                <a href="#" class="tour-card__link"><span data-i18n="see_details">Voir les détails</span> <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+          <div class="tour-card">
+            <div class="tour-card__image">
+              <img src="assets/images/card3.webp" alt="Berat UNESCO" loading="lazy">
+            </div>
+            <div class="tour-card__content">
+              <h3 class="tour-card__title" data-i18n="tour3_title">Relaxation Albanaise</h3>
+              <p class="tour-card__desc" data-i18n="tour3_desc">Berat, Gjirokastër, sites archéologiques.</p>
+              <div class="tour-card__meta">
+                <span><i class="far fa-calendar-alt"></i> <span data-i18n="tour3_days">5 jours</span></span>
+                <a href="#" class="tour-card__link"><span data-i18n="see_details">Voir les détails</span> <i class="fas fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="tours__cta">
+          <a href="tours.html" class="btn btn--outline-dark" data-i18n="all_tours">Voir tous nos circuits</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="features section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="features_title">Vivez l'Albanie comme un local</h2>
+        <div class="features__grid">
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-user-tie"></i></div>
+            <h3 class="feature-card__title" data-i18n="feat1_title">Guide francophone local</h3>
+            <p class="feature-card__desc" data-i18n="feat1_desc">Vous comprenez tout, vous vivez plus</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-users"></i></div>
+            <h3 class="feature-card__title" data-i18n="feat2_title">Groupes intimistes</h3>
+            <p class="feature-card__desc" data-i18n="feat2_desc">Maximum 6-8 personnes</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-landmark"></i></div>
+            <h3 class="feature-card__title" data-i18n="feat3_title">Expériences vraies</h3>
+            <p class="feature-card__desc" data-i18n="feat3_desc">Repas chez l'habitant, traditions vivantes</p>
+          </div>
+          <div class="feature-card">
+            <div class="feature-card__icon"><i class="fas fa-route"></i></div>
+            <h3 class="feature-card__title" data-i18n="feat4_title">Voyage sur mesure</h3>
+            <p class="feature-card__desc" data-i18n="feat4_desc">Adapté à votre rythme</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY ALBANIA -->
+    <section id="about" class="why-albania section section--dark">
+      <div class="container">
+        <div class="why-albania__grid">
+          <div class="why-albania__content">
+            <h2 class="section__title section__title--light" data-i18n="about_title">L'Albanie, le secret le mieux gardé d'Europe</h2>
+            <ul class="why-albania__list">
+              <li data-i18n="about_1">🏛️ Patrimoine UNESCO et histoire fascinante</li>
+              <li data-i18n="about_2">🌊 Des plages parmi les plus belles de Méditerranée</li>
+              <li data-i18n="about_3">❤️ Une hospitalité que vous n'oublierez jamais</li>
+            </ul>
+          </div>
+          <div class="why-albania__media">
+            <img src="https://images.unsplash.com/photo-1555400038-63f5ba517a47?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80" alt="Albanian landscape" loading="lazy">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta section">
+      <div class="container">
+        <h2 class="section__title" data-i18n="cta_title">Prêt pour l'aventure albanaise ?</h2>
+        <p class="cta__subtitle" data-i18n="cta_sub">Nos experts sont là pour créer le voyage de vos rêves</p>
+        <div class="cta__buttons">
+          <a href="#" class="btn btn--primary" data-i18n="cta_plan">Planifier mon voyage</a>
+          <a href="#tours" class="btn btn--outline-dark" data-i18n="nav_tours">Circuits</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contact" class="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__col">
+          <div class="footer__brand"><i class="fas fa-mountain"></i> Escape Albania</div>
+          <p class="footer__desc" data-i18n="footer_desc">Voyages premium et authentiques en Albanie, conçus avec passion par des experts locaux.</p>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title" data-i18n="footer_links">Liens rapides</h4>
+          <ul class="footer__links">
+            <li><a href="#hero" data-i18n="nav_home">Accueil</a></li>
+            <li><a href="#tours" data-i18n="nav_tours">Circuits</a></li>
+            <li><a href="#about" data-i18n="nav_about">À propos</a></li>
+            <li><a href="#contact" data-i18n="nav_contact">Contact</a></li>
+          </ul>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title" data-i18n="nav_contact">Contact</h4>
+          <address>
+            <p><i class="fas fa-map-marker-alt"></i> Tirana, Albania</p>
+            <p><i class="fas fa-phone-alt"></i> +355 69 123 4567</p>
+            <p><i class="fas fa-envelope"></i> hello@escapalbania.al</p>
+          </address>
+        </div>
+        <div class="footer__col">
+          <h4 class="footer__title" data-i18n="footer_follow">Suivez-nous</h4>
+          <div class="footer__social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <p data-i18n="footer_copy">&copy; 2025 Escape Albania. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    /* ════════════════════════════════════════
+       TRANSLATIONS DICTIONARY
+    ════════════════════════════════════════ */
+    const translations = {
+      fr: {
+        nav_home:     "Accueil",
+        nav_tours:    "Circuits",
+        nav_about:    "À propos",
+        nav_contact:  "Contact",
+
+        hero_title:   "Bienvenue en Albanie",
+        hero_subtitle:"Découvrez les trésors de l'Albanie grâce à nos circuits exclusifs.",
+        hero_cta:     "Explorer les circuits",
+
+        tours_title:  "Découvrez l'Albanie avec nos experts",
+        tour1_title:  "15 jours au pays des Aigles",
+        tour1_desc:   "Randonnées inoubliables et nuits chez l'habitant.",
+        tour1_days:   "15 jours",
+        tour2_title:  "L'Albanie en 1 semaine",
+        tour2_desc:   "Ksamil, Gjipe, et villages perchés.",
+        tour2_days:   "7 jours",
+        tour3_title:  "Relaxation Albanaise",
+        tour3_desc:   "Berat, Gjirokastër, sites archéologiques.",
+        tour3_days:   "5 jours",
+        see_details:  "Voir les détails",
+        all_tours:    "Voir tous nos circuits",
+
+        features_title: "Vivez l'Albanie comme un local",
+        feat1_title:  "Guide francophone local",
+        feat1_desc:   "Vous comprenez tout, vous vivez plus",
+        feat2_title:  "Groupes intimistes",
+        feat2_desc:   "Maximum 6-8 personnes",
+        feat3_title:  "Expériences vraies",
+        feat3_desc:   "Repas chez l'habitant, traditions vivantes",
+        feat4_title:  "Voyage sur mesure",
+        feat4_desc:   "Adapté à votre rythme",
+
+        about_title:  "L'Albanie, le secret le mieux gardé d'Europe",
+        about_1:      "🏛️ Patrimoine UNESCO et histoire fascinante",
+        about_2:      "🌊 Des plages parmi les plus belles de Méditerranée",
+        about_3:      "❤️ Une hospitalité que vous n'oublierez jamais",
+
+        cta_title:    "Prêt pour l'aventure albanaise ?",
+        cta_sub:      "Nos experts sont là pour créer le voyage de vos rêves",
+        cta_plan:     "Planifier mon voyage",
+
+        footer_desc:  "Voyages premium et authentiques en Albanie, conçus avec passion par des experts locaux.",
+        footer_links: "Liens rapides",
+        footer_follow:"Suivez-nous",
+        footer_copy:  "© 2025 Escape Albania. Tous droits réservés.",
+      },
+
+      en: {
+        nav_home:     "Home",
+        nav_tours:    "Tours",
+        nav_about:    "About",
+        nav_contact:  "Contact",
+
+        hero_title:   "Welcome to Albania",
+        hero_subtitle:"Discover Albania's treasures through our exclusive tours.",
+        hero_cta:     "Explore tours",
+
+        tours_title:  "Discover Albania with our experts",
+        tour1_title:  "15 days in the Land of Eagles",
+        tour1_desc:   "Unforgettable hikes and nights with local families.",
+        tour1_days:   "15 days",
+        tour2_title:  "Albania in 1 week",
+        tour2_desc:   "Ksamil, Gjipe, and hilltop villages.",
+        tour2_days:   "7 days",
+        tour3_title:  "Albanian Relaxation",
+        tour3_desc:   "Berat, Gjirokastër, archaeological sites.",
+        tour3_days:   "5 days",
+        see_details:  "See details",
+        all_tours:    "See all our tours",
+
+        features_title: "Experience Albania like a local",
+        feat1_title:  "Local French-speaking guide",
+        feat1_desc:   "Understand everything, experience more",
+        feat2_title:  "Intimate groups",
+        feat2_desc:   "Maximum 6-8 people",
+        feat3_title:  "Authentic experiences",
+        feat3_desc:   "Meals with locals, living traditions",
+        feat4_title:  "Tailor-made journey",
+        feat4_desc:   "Adapted to your pace",
+
+        about_title:  "Albania, Europe's best-kept secret",
+        about_1:      "🏛️ UNESCO heritage and fascinating history",
+        about_2:      "🌊 Some of the most beautiful beaches in the Mediterranean",
+        about_3:      "❤️ A hospitality you will never forget",
+
+        cta_title:    "Ready for your Albanian adventure?",
+        cta_sub:      "Our experts are here to create your dream journey",
+        cta_plan:     "Plan my trip",
+
+        footer_desc:  "Premium and authentic travel in Albania, crafted with passion by local experts.",
+        footer_links: "Quick links",
+        footer_follow:"Follow us",
+        footer_copy:  "© 2025 Escape Albania. All rights reserved.",
+      },
+
+      nl: {
+        nav_home:     "Home",
+        nav_tours:    "Reizen",
+        nav_about:    "Over ons",
+        nav_contact:  "Contact",
+
+        hero_title:   "Welkom in Albanië",
+        hero_subtitle:"Ontdek de schatten van Albanië via onze exclusieve reizen.",
+        hero_cta:     "Reizen ontdekken",
+
+        tours_title:  "Ontdek Albanië met onze experts",
+        tour1_title:  "15 dagen in het Land van de Arenden",
+        tour1_desc:   "Onvergetelijke wandelingen en overnachtingen bij lokale families.",
+        tour1_days:   "15 dagen",
+        tour2_title:  "Albanië in 1 week",
+        tour2_desc:   "Ksamil, Gjipe en bergdorpjes.",
+        tour2_days:   "7 dagen",
+        tour3_title:  "Albanese Ontspanning",
+        tour3_desc:   "Berat, Gjirokastër, archeologische sites.",
+        tour3_days:   "5 dagen",
+        see_details:  "Bekijk details",
+        all_tours:    "Bekijk alle reizen",
+
+        features_title: "Beleef Albanië als een local",
+        feat1_title:  "Lokale Franstalige gids",
+        feat1_desc:   "Begrijp alles, beleef meer",
+        feat2_title:  "Intieme groepen",
+        feat2_desc:   "Maximaal 6-8 personen",
+        feat3_title:  "Echte ervaringen",
+        feat3_desc:   "Maaltijden bij locals, levende tradities",
+        feat4_title:  "Reis op maat",
+        feat4_desc:   "Aangepast aan uw tempo",
+
+        about_title:  "Albanië, het best bewaarde geheim van Europa",
+        about_1:      "🏛️ UNESCO-erfgoed en fascinerende geschiedenis",
+        about_2:      "🌊 Enkele van de mooiste stranden van de Middellandse Zee",
+        about_3:      "❤️ Een gastvrijheid die u nooit zult vergeten",
+
+        cta_title:    "Klaar voor uw Albaans avontuur?",
+        cta_sub:      "Onze experts staan klaar om uw droomreis te creëren",
+        cta_plan:     "Mijn reis plannen",
+
+        footer_desc:  "Premium en authentieke reizen in Albanië, met passie samengesteld door lokale experts.",
+        footer_links: "Snelle links",
+        footer_follow:"Volg ons",
+        footer_copy:  "© 2025 Escape Albania. Alle rechten voorbehouden.",
+      },
+
+      de: {
+        nav_home:     "Startseite",
+        nav_tours:    "Touren",
+        nav_about:    "Über uns",
+        nav_contact:  "Kontakt",
+
+        hero_title:   "Willkommen in Albanien",
+        hero_subtitle:"Entdecken Sie Albaniens Schätze auf unseren exklusiven Touren.",
+        hero_cta:     "Touren entdecken",
+
+        tours_title:  "Entdecken Sie Albanien mit unseren Experten",
+        tour1_title:  "15 Tage im Land der Adler",
+        tour1_desc:   "Unvergessliche Wanderungen und Nächte bei Einheimischen.",
+        tour1_days:   "15 Tage",
+        tour2_title:  "Albanien in 1 Woche",
+        tour2_desc:   "Ksamil, Gjipe und Bergdörfer.",
+        tour2_days:   "7 Tage",
+        tour3_title:  "Albanische Entspannung",
+        tour3_desc:   "Berat, Gjirokastër, archäologische Stätten.",
+        tour3_days:   "5 Tage",
+        see_details:  "Details ansehen",
+        all_tours:    "Alle Touren ansehen",
+
+        features_title: "Erleben Sie Albanien wie ein Einheimischer",
+        feat1_title:  "Lokaler französischsprachiger Guide",
+        feat1_desc:   "Alles verstehen, mehr erleben",
+        feat2_title:  "Kleine Gruppen",
+        feat2_desc:   "Maximal 6-8 Personen",
+        feat3_title:  "Echte Erlebnisse",
+        feat3_desc:   "Mahlzeiten bei Einheimischen, lebende Traditionen",
+        feat4_title:  "Maßgeschneiderte Reise",
+        feat4_desc:   "Angepasst an Ihr Tempo",
+
+        about_title:  "Albanien, Europas bestgehütetes Geheimnis",
+        about_1:      "🏛️ UNESCO-Erbe und faszinierende Geschichte",
+        about_2:      "🌊 Einige der schönsten Strände des Mittelmeers",
+        about_3:      "❤️ Eine Gastfreundschaft, die Sie nie vergessen werden",
+
+        cta_title:    "Bereit für Ihr albanisches Abenteuer?",
+        cta_sub:      "Unsere Experten helfen Ihnen, Ihre Traumreise zu gestalten",
+        cta_plan:     "Meine Reise planen",
+
+        footer_desc:  "Premium und authentische Reisen in Albanien, leidenschaftlich gestaltet von lokalen Experten.",
+        footer_links: "Schnelllinks",
+        footer_follow:"Folgen Sie uns",
+        footer_copy:  "© 2025 Escape Albania. Alle Rechte vorbehalten.",
+      }
+    };
+
+    /* ════════════════════════════════════════
+       LANGUAGE SWITCHER LOGIC
+    ════════════════════════════════════════ */
+    let currentLang = localStorage.getItem('escape-albania-lang') || 'fr';
+
+    function applyTranslations(lang) {
+      const dict = translations[lang];
+      if (!dict) return;
+
+      // Fade out
+      document.querySelectorAll('[data-i18n]').forEach(el => el.classList.add('lang-transition'));
+
+      setTimeout(() => {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (dict[key]) {
+            // Preserve child nodes (e.g. icons) for elements that only have text
+            el.textContent = dict[key];
+          }
+        });
+
+        // Update <html lang> attribute
+        document.documentElement.lang = lang;
+
+        // Update page title
+        const titles = {
+          fr: "Escape Albania – Découvrez l'Albanie autrement",
+          en: "Escape Albania – Discover Albania differently",
+          nl: "Escape Albania – Ontdek Albanië anders",
+          de: "Escape Albania – Albanien anders entdecken"
+        };
+        document.title = titles[lang] || titles.en;
+
+        // Fade in
+        document.querySelectorAll('[data-i18n]').forEach(el => el.classList.remove('lang-transition'));
+      }, 180);
+
+      // Update active button
+      document.querySelectorAll('.lang-switcher__item').forEach(btn => {
+        btn.classList.toggle('active', btn.getAttribute('data-lang') === lang);
+      });
+
+      currentLang = lang;
+      localStorage.setItem('escape-albania-lang', lang);
+    }
+
+    // Attach click events to language buttons
+    document.querySelectorAll('.lang-switcher__item').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const lang = btn.getAttribute('data-lang');
+        if (lang !== currentLang) applyTranslations(lang);
+      });
+    });
+
+    // Apply saved/default language on load
+    applyTranslations(currentLang);
+
+    /* ════════════════════════════════════════
+       NAVBAR SCROLL
+    ════════════════════════════════════════ */
+    const navbar = document.querySelector('.js-navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    /* ════════════════════════════════════════
+       HAMBURGER MENU
+    ════════════════════════════════════════ */
+    const hamburger = document.querySelector('.js-hamburger');
+    const navCollapse = document.querySelector('.js-nav-collapse');
+    hamburger?.addEventListener('click', () => {
+      const isOpen = navCollapse.classList.toggle('open');
+      hamburger.setAttribute('aria-expanded', isOpen);
+    });
+  </script>
+</body>
+</html>
